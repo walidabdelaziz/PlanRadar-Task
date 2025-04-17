@@ -14,6 +14,7 @@ import UIKit
 class WeatherViewModel {
     let isLoading = BehaviorRelay<Bool>(value: false)
     var weatherData = BehaviorRelay<WeatherData>(value: WeatherData())
+    var savedWeatherData = BehaviorRelay<[GroupedWeatherInfo]>(value: [])
 
     private let weatherService: WeatherProtocol
     private let weatherUseCase: WeatherUseCaseProtocol
@@ -39,7 +40,8 @@ class WeatherViewModel {
     func saveWeatherData(weatherData: WeatherData) {
         weatherUseCase.saveWeatherData(weatherData)
     }
-    func fetchSavedWeatherData() -> [WeatherInfo] {
-        return weatherUseCase.fetchSavedWeatherData()
+    func fetchSavedWeatherData() {
+        let grouped = weatherUseCase.fetchGroupedWeatherDataByCityId()
+        savedWeatherData.accept(grouped)
     }
 }

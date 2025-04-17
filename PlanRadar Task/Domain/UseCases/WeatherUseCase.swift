@@ -11,7 +11,7 @@ import CoreData
 
 protocol WeatherUseCaseProtocol {
     func saveWeatherData(_ weatherData: WeatherData)
-    func fetchSavedWeatherData() -> [WeatherInfo]
+    func fetchGroupedWeatherDataByCityId() -> [GroupedWeatherInfo]
 }
 final class WeatherUseCase: WeatherUseCaseProtocol {
     private let context: NSManagedObjectContext
@@ -34,6 +34,7 @@ final class WeatherUseCase: WeatherUseCaseProtocol {
             } else {
                 city = City(context: context)
                 city.name = cityName
+                city.countryCode = weatherData.sys?.country ?? ""
                 city.id = Int64(cityId)
             }
 
@@ -56,16 +57,29 @@ final class WeatherUseCase: WeatherUseCaseProtocol {
             print("Failed saving: \(nserror), \(nserror.userInfo)")
         }
     }
-    func fetchSavedWeatherData() -> [WeatherInfo] {
+    func fetchGroupedWeatherDataByCityId() -> [GroupedWeatherInfo] {
         let fetchRequest: NSFetchRequest<WeatherInfo> = WeatherInfo.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
 
         do {
             let results = try context.fetch(fetchRequest)
-            return results
+            let grouped = Dictionary(grouping: results) { (weatherInfo) -> Int64 in
+                return weatherInfo.city?.id ?? -1
+            }
+            let result = grouped.compactMap { (cityId, weatherInfos) -> GroupedWeatherInfo? in
+                guard let city = weatherInfos.first?.city else { return nil }
+                return GroupedWeatherInfo(
+                    cityId: cityId,
+                    cityName: city.name ?? "Unknown",
+                    countryCode: city.countryCode ?? "",
+                    weatherItems: weatherInfos
+                )
+            }
+            return result
         } catch {
             print("Failed to fetch weather data: \(error)")
             return []
         }
     }
+
 }

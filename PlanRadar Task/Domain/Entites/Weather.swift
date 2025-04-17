@@ -61,3 +61,10 @@ struct Wind: Codable {
     var speed: Double?
     var deg: Int?
 }
+// MARK: - Grouped Weather Info
+struct GroupedWeatherInfo {
+    let cityId: Int64
+    let cityName: String
+    let countryCode: String
+    let weatherItems: [WeatherInfo]
+}
