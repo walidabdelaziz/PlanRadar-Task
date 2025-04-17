@@ -23,6 +23,7 @@
 		CBEC95B72DB11BB800C0B28E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95B62DB11BB800C0B28E /* SearchVC.swift */; };
 		CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95B92DB1216100C0B28E /* RxCocoa */; };
 		CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95BB2DB1216100C0B28E /* RxSwift */; };
+		CBEC95BF2DB1259600C0B28E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95BE2DB1259600C0B28E /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */,
+				CBEC95BF2DB1259600C0B28E /* IQKeyboardManagerSwift in Frameworks */,
 				CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */,
 				CBEC95A62DB10A9D00C0B28E /* Alamofire in Frameworks */,
 			);
@@ -228,6 +230,7 @@
 				CBEC95A52DB10A9D00C0B28E /* Alamofire */,
 				CBEC95B92DB1216100C0B28E /* RxCocoa */,
 				CBEC95BB2DB1216100C0B28E /* RxSwift */,
+				CBEC95BE2DB1259600C0B28E /* IQKeyboardManagerSwift */,
 			);
 			productName = "PlanRadar Task";
 			productReference = CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */;
@@ -314,6 +317,7 @@
 			packageReferences = (
 				CBEC95A42DB10A9D00C0B28E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				CBEC95BD2DB1259600C0B28E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CBEC952F2DB100CB00C0B28E /* Products */;
@@ -726,6 +730,14 @@
 				minimumVersion = 6.9.0;
 			};
 		};
+		CBEC95BD2DB1259600C0B28E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -743,6 +755,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		CBEC95BE2DB1259600C0B28E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEC95BD2DB1259600C0B28E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
