@@ -105,9 +105,80 @@
             </objects>
             <point key="canvasLocation" x="2549" y="4"/>
         </scene>
+        <!--SearchVC-->
+        <scene sceneID="O3q-1n-9RL">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="oE1-5h-oDe" customClass="SearchVC" customModule="PlanRadar_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZK2-w0-39e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-d1-Zfc">
+                                <rect key="frame" x="20" y="105.33333333333333" width="298" height="39.999999999999986"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="w6W-Bd-dcp">
+                                <rect key="frame" x="28" y="118" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="UZB-lo-s5i"/>
+                                    <constraint firstAttribute="height" constant="15" id="aqc-ny-9ha"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter city, postcode or airoport location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-sd-Ljl">
+                                <rect key="frame" x="20" y="75" width="353" height="14.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emd-r6-KjG">
+                                <rect key="frame" x="328" y="111" width="45" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.72549019609999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wcY-z4-KAr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wcY-z4-KAr" firstAttribute="trailing" secondItem="emd-r6-KjG" secondAttribute="trailing" constant="20" id="6t6-wA-9Zo"/>
+                            <constraint firstItem="NtI-sd-Ljl" firstAttribute="leading" secondItem="wcY-z4-KAr" secondAttribute="leading" constant="20" id="BXb-Ni-bOL"/>
+                            <constraint firstItem="w6W-Bd-dcp" firstAttribute="leading" secondItem="bgo-d1-Zfc" secondAttribute="leading" constant="8" id="Ctq-4o-IFc"/>
+                            <constraint firstItem="bgo-d1-Zfc" firstAttribute="top" secondItem="NtI-sd-Ljl" secondAttribute="bottom" constant="16" id="GKp-1T-Qh4"/>
+                            <constraint firstItem="bgo-d1-Zfc" firstAttribute="leading" secondItem="ZK2-w0-39e" secondAttribute="leading" constant="20" id="PHC-WI-A0K"/>
+                            <constraint firstItem="emd-r6-KjG" firstAttribute="leading" secondItem="bgo-d1-Zfc" secondAttribute="trailing" constant="10" id="Urx-mL-ME5"/>
+                            <constraint firstItem="NtI-sd-Ljl" firstAttribute="top" secondItem="wcY-z4-KAr" secondAttribute="top" constant="16" id="aIG-JR-MkD"/>
+                            <constraint firstItem="bgo-d1-Zfc" firstAttribute="height" secondItem="ZK2-w0-39e" secondAttribute="height" multiplier="0.0469484" id="jeX-u3-Vuu"/>
+                            <constraint firstItem="emd-r6-KjG" firstAttribute="centerY" secondItem="bgo-d1-Zfc" secondAttribute="centerY" id="maR-DP-TAE"/>
+                            <constraint firstItem="w6W-Bd-dcp" firstAttribute="centerY" secondItem="bgo-d1-Zfc" secondAttribute="centerY" id="sfd-mS-cqH"/>
+                            <constraint firstItem="wcY-z4-KAr" firstAttribute="trailing" secondItem="NtI-sd-Ljl" secondAttribute="trailing" constant="20" id="ywF-x4-IEG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="emd-r6-KjG" id="1l2-ml-099"/>
+                        <outlet property="searchTF" destination="bgo-d1-Zfc" id="mn0-ut-So9"/>
+                        <outlet property="titleLbl" destination="NtI-sd-Ljl" id="v6h-tg-TOy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2b0-et-4se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3305" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <image name="plusIcon" width="60" height="67"/>
+        <image name="searchIcon" width="20.666666030883789" height="20.666666030883789"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

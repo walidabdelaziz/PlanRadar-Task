@@ -20,6 +20,9 @@
 		CBEC95B02DB111A800C0B28E /* CitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */; };
 		CBEC95B42DB11A2300C0B28E /* CitiesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */; };
 		CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */; };
+		CBEC95B72DB11BB800C0B28E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95B62DB11BB800C0B28E /* SearchVC.swift */; };
+		CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95B92DB1216100C0B28E /* RxCocoa */; };
+		CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95BB2DB1216100C0B28E /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,7 @@
 		CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesVC.swift; sourceTree = "<group>"; };
 		CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVCell.swift; sourceTree = "<group>"; };
 		CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTVCell.xib; sourceTree = "<group>"; };
+		CBEC95B62DB11BB800C0B28E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -76,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */,
+				CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */,
 				CBEC95A62DB10A9D00C0B28E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +128,7 @@
 			children = (
 				CBEC957B2DB1064A00C0B28E /* SplashVC.swift */,
 				CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */,
+				CBEC95B62DB11BB800C0B28E /* SearchVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +226,8 @@
 			name = "PlanRadar Task";
 			packageProductDependencies = (
 				CBEC95A52DB10A9D00C0B28E /* Alamofire */,
+				CBEC95B92DB1216100C0B28E /* RxCocoa */,
+				CBEC95BB2DB1216100C0B28E /* RxSwift */,
 			);
 			productName = "PlanRadar Task";
 			productReference = CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */;
@@ -304,6 +313,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CBEC95A42DB10A9D00C0B28E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CBEC952F2DB100CB00C0B28E /* Products */;
@@ -353,6 +363,7 @@
 				CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */,
 				CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */,
 				CBEC95B02DB111A800C0B28E /* CitiesVC.swift in Sources */,
+				CBEC95B72DB11BB800C0B28E /* SearchVC.swift in Sources */,
 				CBEC95AE2DB1103600C0B28E /* Constants.swift in Sources */,
 				CBEC95882DB1064A00C0B28E /* SplashVC.swift in Sources */,
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,
@@ -707,6 +718,14 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -714,6 +733,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBEC95A42DB10A9D00C0B28E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CBEC95B92DB1216100C0B28E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CBEC95BB2DB1216100C0B28E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
