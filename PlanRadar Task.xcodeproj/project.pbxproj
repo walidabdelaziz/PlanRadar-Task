@@ -24,6 +24,10 @@
 		CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95B92DB1216100C0B28E /* RxCocoa */; };
 		CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95BB2DB1216100C0B28E /* RxSwift */; };
 		CBEC95BF2DB1259600C0B28E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95BE2DB1259600C0B28E /* IQKeyboardManagerSwift */; };
+		CBEC95C42DB1277400C0B28E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95C32DB1276F00C0B28E /* Weather.swift */; };
+		CBEC95C72DB128E400C0B28E /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95C62DB128DE00C0B28E /* WeatherService.swift */; };
+		CBEC95CA2DB12A6B00C0B28E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */; };
+		CBEC95CC2DB1305700C0B28E /* GenericModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95CB2DB1305400C0B28E /* GenericModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVCell.swift; sourceTree = "<group>"; };
 		CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTVCell.xib; sourceTree = "<group>"; };
 		CBEC95B62DB11BB800C0B28E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		CBEC95C32DB1276F00C0B28E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		CBEC95C62DB128DE00C0B28E /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		CBEC95CB2DB1305400C0B28E /* GenericModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEC957C2DB1064A00C0B28E /* Controllers */,
+				CBEC95C82DB12A5300C0B28E /* ViewModels */,
 				CBEC95802DB1064A00C0B28E /* Views */,
 			);
 			path = Presentation;
@@ -167,6 +176,7 @@
 				CBEC95822DB1064A00C0B28E /* AppDelegate.swift */,
 				CBEC95932DB1066700C0B28E /* Helper */,
 				CBEC95A92DB10E8300C0B28E /* DataLayer  */,
+				CBEC95C02DB1268E00C0B28E /* Domain */,
 				CBEC95812DB1064A00C0B28E /* Presentation */,
 				CBEC95832DB1064A00C0B28E /* Assets.xcassets */,
 				CBEC95842DB1064A00C0B28E /* Info.plist */,
@@ -197,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEC95A82DB10E8300C0B28E /* Network */,
+				CBEC95C52DB128A700C0B28E /* Services */,
 			);
 			path = "DataLayer ";
 			sourceTree = "<group>";
@@ -208,6 +219,47 @@
 				CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CBEC95C02DB1268E00C0B28E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95C12DB126D500C0B28E /* Entites */,
+				CBEC95C22DB126DC00C0B28E /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CBEC95C12DB126D500C0B28E /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95C32DB1276F00C0B28E /* Weather.swift */,
+				CBEC95CB2DB1305400C0B28E /* GenericModel.swift */,
+			);
+			path = Entites;
+			sourceTree = "<group>";
+		};
+		CBEC95C22DB126DC00C0B28E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CBEC95C52DB128A700C0B28E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95C62DB128DE00C0B28E /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CBEC95C82DB12A5300C0B28E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,11 +417,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */,
+				CBEC95CA2DB12A6B00C0B28E /* WeatherViewModel.swift in Sources */,
 				CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */,
+				CBEC95C72DB128E400C0B28E /* WeatherService.swift in Sources */,
+				CBEC95CC2DB1305700C0B28E /* GenericModel.swift in Sources */,
 				CBEC95B02DB111A800C0B28E /* CitiesVC.swift in Sources */,
 				CBEC95B72DB11BB800C0B28E /* SearchVC.swift in Sources */,
 				CBEC95AE2DB1103600C0B28E /* Constants.swift in Sources */,
 				CBEC95882DB1064A00C0B28E /* SplashVC.swift in Sources */,
+				CBEC95C42DB1277400C0B28E /* Weather.swift in Sources */,
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,
 				CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */,
 				CBEC95942DB1066700C0B28E /* Extensions.swift in Sources */,

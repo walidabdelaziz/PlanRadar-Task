@@ -12,7 +12,10 @@ import RxCocoa
 class SearchVC: UIViewController {
 
     let disposeBag = DisposeBag()
+    let weatherViewModel = WeatherViewModel(weatherService: WeatherService(networkService: NetworkManager()))
 
+    @IBOutlet weak var messageLbl: UILabel!
+    @IBOutlet weak var resultsTV: UITableView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var searchTF: UITextField!
@@ -20,6 +23,7 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTextField()
+        configureTableView()
         bindUI()
     }
     func setupUI(){
@@ -32,6 +36,9 @@ class SearchVC: UIViewController {
         searchTF.paddingLeft(padding: 28)
         searchTF.paddingRight(padding: 8)
     }
+    func configureTableView() {
+        resultsTV.register(UINib(nibName: "CitiesTVCell", bundle: nil), forCellReuseIdentifier: "CitiesTVCell")
+    }
     func bindUI(){
         // bind cancel button
         cancelBtn.rx.tap
@@ -39,5 +46,38 @@ class SearchVC: UIViewController {
                 guard let self = self else{return}
                 self.dismiss(animated: true)
             }).disposed(by: disposeBag)
+        
+        // bind search text field
+        searchTF.rx.text.orEmpty
+            .debounce(.milliseconds(600), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .filter { !$0.isEmpty }
+            .subscribe(onNext: { [weak self] text in
+                guard let self = self else {return}
+                self.weatherViewModel.getWeatherData(searchText: text)
+            })
+            .disposed(by: disposeBag)
+        
+        // bind weather data
+        weatherViewModel.weatherData
+            .map { [weak self] weatherData -> [WeatherData] in
+                guard let self = self else { return [] }
+                if weatherData.cod?.intValue != 200{
+                    self.messageLbl.text = weatherData.message
+                    return []
+                }
+                return [weatherData]
+            }
+            .observe(on: MainScheduler.instance)
+            .do(onNext: { [weak self] data in
+                guard let self = self else { return }
+                self.resultsTV.isHidden = data.isEmpty
+                self.messageLbl.isHidden = !data.isEmpty
+            })
+            .bind(to: resultsTV.rx.items(cellIdentifier: "CitiesTVCell", cellType: CitiesTVCell.self)) { row, weatherData, cell in
+                cell.selectionStyle = .none
+                cell.weatherData = weatherData
+            }
+            .disposed(by: disposeBag)
     }
 }

@@ -114,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-d1-Zfc">
-                                <rect key="frame" x="20" y="105.33333333333333" width="298" height="39.999999999999986"/>
+                                <rect key="frame" x="20" y="108" width="298" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -125,8 +125,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emd-r6-KjG">
+                                <rect key="frame" x="328" y="113.66666666666669" width="45" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.48627450979999998" green="0.72549019609999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="w6W-Bd-dcp">
-                                <rect key="frame" x="28" y="118" width="15" height="15"/>
+                                <rect key="frame" x="28" y="120.66666666666669" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="UZB-lo-s5i"/>
                                     <constraint firstAttribute="height" constant="15" id="aqc-ny-9ha"/>
@@ -135,30 +142,39 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter city, postcode or airoport location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-sd-Ljl">
-                                <rect key="frame" x="20" y="75" width="353" height="14.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter city, postcode or airoport location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtI-sd-Ljl">
+                                <rect key="frame" x="20" y="75" width="353" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emd-r6-KjG">
-                                <rect key="frame" x="328" y="111" width="45" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.48627450979999998" green="0.72549019609999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-aN-EYJ">
+                                <rect key="frame" x="0.0" y="168" width="393" height="650"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-Ro-P5d">
+                                <rect key="frame" x="166.66666666666666" y="416.33333333333331" width="60" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wcY-z4-KAr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uwc-aN-EYJ" firstAttribute="leading" secondItem="wcY-z4-KAr" secondAttribute="leading" id="3Kr-xS-I6F"/>
                             <constraint firstItem="wcY-z4-KAr" firstAttribute="trailing" secondItem="emd-r6-KjG" secondAttribute="trailing" constant="20" id="6t6-wA-9Zo"/>
+                            <constraint firstItem="wcY-z4-KAr" firstAttribute="bottom" secondItem="uwc-aN-EYJ" secondAttribute="bottom" id="9ib-ha-pPF"/>
                             <constraint firstItem="NtI-sd-Ljl" firstAttribute="leading" secondItem="wcY-z4-KAr" secondAttribute="leading" constant="20" id="BXb-Ni-bOL"/>
+                            <constraint firstItem="uwc-aN-EYJ" firstAttribute="top" secondItem="bgo-d1-Zfc" secondAttribute="bottom" constant="20" id="COK-E5-1cC"/>
                             <constraint firstItem="w6W-Bd-dcp" firstAttribute="leading" secondItem="bgo-d1-Zfc" secondAttribute="leading" constant="8" id="Ctq-4o-IFc"/>
                             <constraint firstItem="bgo-d1-Zfc" firstAttribute="top" secondItem="NtI-sd-Ljl" secondAttribute="bottom" constant="16" id="GKp-1T-Qh4"/>
+                            <constraint firstItem="BnL-Ro-P5d" firstAttribute="centerX" secondItem="ZK2-w0-39e" secondAttribute="centerX" id="O8H-Ru-Maj"/>
+                            <constraint firstAttribute="trailing" secondItem="uwc-aN-EYJ" secondAttribute="trailing" id="OMW-LC-A1L"/>
                             <constraint firstItem="bgo-d1-Zfc" firstAttribute="leading" secondItem="ZK2-w0-39e" secondAttribute="leading" constant="20" id="PHC-WI-A0K"/>
                             <constraint firstItem="emd-r6-KjG" firstAttribute="leading" secondItem="bgo-d1-Zfc" secondAttribute="trailing" constant="10" id="Urx-mL-ME5"/>
                             <constraint firstItem="NtI-sd-Ljl" firstAttribute="top" secondItem="wcY-z4-KAr" secondAttribute="top" constant="16" id="aIG-JR-MkD"/>
+                            <constraint firstItem="BnL-Ro-P5d" firstAttribute="centerY" secondItem="ZK2-w0-39e" secondAttribute="centerY" id="cKV-AZ-4YD"/>
                             <constraint firstItem="bgo-d1-Zfc" firstAttribute="height" secondItem="ZK2-w0-39e" secondAttribute="height" multiplier="0.0469484" id="jeX-u3-Vuu"/>
                             <constraint firstItem="emd-r6-KjG" firstAttribute="centerY" secondItem="bgo-d1-Zfc" secondAttribute="centerY" id="maR-DP-TAE"/>
                             <constraint firstItem="w6W-Bd-dcp" firstAttribute="centerY" secondItem="bgo-d1-Zfc" secondAttribute="centerY" id="sfd-mS-cqH"/>
@@ -167,6 +183,8 @@
                     </view>
                     <connections>
                         <outlet property="cancelBtn" destination="emd-r6-KjG" id="1l2-ml-099"/>
+                        <outlet property="messageLbl" destination="BnL-Ro-P5d" id="AVJ-Gg-bJW"/>
+                        <outlet property="resultsTV" destination="uwc-aN-EYJ" id="hZL-Uj-Miz"/>
                         <outlet property="searchTF" destination="bgo-d1-Zfc" id="mn0-ut-So9"/>
                         <outlet property="titleLbl" destination="NtI-sd-Ljl" id="v6h-tg-TOy"/>
                     </connections>
