@@ -15,8 +15,8 @@ class HistoryVC: UIViewController {
     var weatherViewModel = WeatherViewModel(weatherService: WeatherService(networkService: NetworkManager()),
                                             weatherUseCase: WeatherUseCase(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext))
 
-    @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var citiesTV: UITableView!
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var historyTV: UITableView!
     @IBOutlet weak var titleLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,11 @@ class HistoryVC: UIViewController {
         titleLbl.textColor = .secondaryColor
     }
     func configureTableView() {
-        citiesTV.register(UINib(nibName: "HistoryTVCell", bundle: nil), forCellReuseIdentifier: "HistoryTVCell")
+        historyTV.register(UINib(nibName: "HistoryTVCell", bundle: nil), forCellReuseIdentifier: "HistoryTVCell")
     }
     func bindUI(){
         // bind add button
-        addBtn.rx.tap
+        cancelBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
                 self.dismiss(animated: true)
@@ -47,10 +47,18 @@ class HistoryVC: UIViewController {
             })
             .map { $0.weatherItems }
             .observe(on: MainScheduler.instance)
-            .bind(to: citiesTV.rx.items(cellIdentifier: "HistoryTVCell", cellType: HistoryTVCell.self)) { row, historyData, cell in
+            .bind(to: historyTV.rx.items(cellIdentifier: "HistoryTVCell", cellType: HistoryTVCell.self)) { row, historyData, cell in
                 cell.selectionStyle = .none
                 cell.historyData = historyData
             }
+            .disposed(by: disposeBag)
+        
+        // handle tableview selection
+        historyTV.rx.itemSelected
+            .subscribe(onNext: { [weak self] selectedItem in
+                guard let self = self else { return }
+                self.dismiss(animated: true)
+            })
             .disposed(by: disposeBag)
     }
 }
