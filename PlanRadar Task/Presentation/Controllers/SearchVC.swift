@@ -11,6 +11,7 @@ import RxCocoa
 
 class SearchVC: UIViewController {
 
+    var onConfirm: ((Bool) -> Void)?
     let disposeBag = DisposeBag()
     let weatherViewModel = WeatherViewModel(weatherService: WeatherService(networkService: NetworkManager()),
                                             weatherUseCase: WeatherUseCase(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext))
@@ -54,7 +55,7 @@ class SearchVC: UIViewController {
         cancelBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
-                self.dismiss(animated: true)
+                self.onConfirm!(false)
             }).disposed(by: disposeBag)
         
         // bind search text field
@@ -102,6 +103,7 @@ class SearchVC: UIViewController {
         .subscribe(onNext: { [weak self] weatherData, indexPath in
             guard let self = self else { return }
             self.weatherViewModel.saveWeatherData(weatherData: weatherData)
+            self.onConfirm!(true)
         })
         .disposed(by: disposeBag)
     }

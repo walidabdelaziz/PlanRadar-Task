@@ -37,8 +37,16 @@ class CitiesVC: UIViewController {
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let SearchVC = storyboard.instantiateViewController(withIdentifier: "SearchVC")
-                present(SearchVC, animated: true, completion: nil)
+                let searchVC = storyboard.instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
+                searchVC.onConfirm = {[weak self] confirmed in
+                    guard let self = self else{return}
+                    self.dismiss(animated: true){
+                        if confirmed {
+                            self.weatherViewModel.fetchSavedWeatherData()
+                        }
+                    }
+                }
+                present(searchVC, animated: true, completion: nil)
             }).disposed(by: disposeBag)
         
         // bind weather data
