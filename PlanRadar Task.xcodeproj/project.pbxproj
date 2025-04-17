@@ -30,6 +30,11 @@
 		CBEC95CC2DB1305700C0B28E /* GenericModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95CB2DB1305400C0B28E /* GenericModel.swift */; };
 		CBEC95CF2DB137E900C0B28E /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95CE2DB137E900C0B28E /* NVActivityIndicatorView */; };
 		CBEC95D12DB137E900C0B28E /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95D02DB137E900C0B28E /* NVActivityIndicatorViewExtended */; };
+		CBEC96072DB152CC00C0B28E /* Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96052DB152CC00C0B28E /* Weather.xcdatamodeld */; };
+		CBEC96162DB1544100C0B28E /* PlanRadar_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96142DB1544100C0B28E /* PlanRadar_TaskTests.swift */; };
+		CBEC961A2DB1544500C0B28E /* PlanRadar_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */; };
+		CBEC961B2DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */; };
+		CBEC961D2DB1658600C0B28E /* WeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,20 +76,12 @@
 		CBEC95C62DB128DE00C0B28E /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		CBEC95CB2DB1305400C0B28E /* GenericModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModel.swift; sourceTree = "<group>"; };
+		CBEC96062DB152CC00C0B28E /* Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weather.xcdatamodel; sourceTree = "<group>"; };
+		CBEC96142DB1544100C0B28E /* PlanRadar_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskTests.swift; sourceTree = "<group>"; };
+		CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskUITests.swift; sourceTree = "<group>"; };
+		CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "PlanRadar TaskTests";
-			sourceTree = "<group>";
-		};
-		CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "PlanRadar TaskUITests";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CBEC952B2DB100CB00C0B28E /* Frameworks */ = {
@@ -121,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				CBEC95872DB1064A00C0B28E /* PlanRadar Task */,
-				CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */,
-				CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */,
+				CBEC96152DB1544100C0B28E /* PlanRadar TaskTests */,
+				CBEC96192DB1544500C0B28E /* PlanRadar TaskUITests */,
 				CBEC952F2DB100CB00C0B28E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -239,6 +236,7 @@
 			children = (
 				CBEC95C32DB1276F00C0B28E /* Weather.swift */,
 				CBEC95CB2DB1305400C0B28E /* GenericModel.swift */,
+				CBEC96052DB152CC00C0B28E /* Weather.xcdatamodeld */,
 			);
 			path = Entites;
 			sourceTree = "<group>";
@@ -246,6 +244,7 @@
 		CBEC95C22DB126DC00C0B28E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -264,6 +263,23 @@
 				CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CBEC96152DB1544100C0B28E /* PlanRadar TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC96142DB1544100C0B28E /* PlanRadar_TaskTests.swift */,
+			);
+			path = "PlanRadar TaskTests";
+			sourceTree = "<group>";
+		};
+		CBEC96192DB1544500C0B28E /* PlanRadar TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */,
+				CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */,
+			);
+			path = "PlanRadar TaskUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +323,6 @@
 			dependencies = (
 				CBEC95462DB100CD00C0B28E /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */,
-			);
 			name = "PlanRadar TaskTests";
 			packageProductDependencies = (
 			);
@@ -329,9 +342,6 @@
 			);
 			dependencies = (
 				CBEC95502DB100CD00C0B28E /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */,
 			);
 			name = "PlanRadar TaskUITests";
 			packageProductDependencies = (
@@ -425,6 +435,7 @@
 			files = (
 				CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */,
 				CBEC95CA2DB12A6B00C0B28E /* WeatherViewModel.swift in Sources */,
+				CBEC96072DB152CC00C0B28E /* Weather.xcdatamodeld in Sources */,
 				CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */,
 				CBEC95C72DB128E400C0B28E /* WeatherService.swift in Sources */,
 				CBEC95CC2DB1305700C0B28E /* GenericModel.swift in Sources */,
@@ -436,6 +447,7 @@
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,
 				CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */,
 				CBEC95942DB1066700C0B28E /* Extensions.swift in Sources */,
+				CBEC961D2DB1658600C0B28E /* WeatherUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC96162DB1544100C0B28E /* PlanRadar_TaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC961A2DB1544500C0B28E /* PlanRadar_TaskUITests.swift in Sources */,
+				CBEC961B2DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +858,19 @@
 			productName = NVActivityIndicatorViewExtended;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CBEC96052DB152CC00C0B28E /* Weather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBEC96062DB152CC00C0B28E /* Weather.xcdatamodel */,
+			);
+			currentVersion = CBEC96062DB152CC00C0B28E /* Weather.xcdatamodel */;
+			path = Weather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CBEC95262DB100CB00C0B28E /* Project object */;
 }

@@ -8,16 +8,21 @@
 import RxSwift
 import RxCocoa
 import Alamofire
+import CoreData
+import UIKit
 
 class WeatherViewModel {
     let isLoading = BehaviorRelay<Bool>(value: false)
     var weatherData = BehaviorRelay<WeatherData>(value: WeatherData())
-    
-    private let weatherService: WeatherProtocol
 
-    init(weatherService: WeatherProtocol) {
+    private let weatherService: WeatherProtocol
+    private let weatherUseCase: WeatherUseCaseProtocol
+
+    init(weatherService: WeatherProtocol, weatherUseCase: WeatherUseCaseProtocol) {
         self.weatherService = weatherService
+        self.weatherUseCase = weatherUseCase
     }
+
     func getWeatherData(searchText: String) {
         isLoading.accept(true)
         weatherService.getWeatherData(searchText: searchText, completion: { [weak self] result in
@@ -30,5 +35,11 @@ class WeatherViewModel {
                 print("Error fetching data: \(error)")
             }
         })
+    }
+    func saveWeatherData(weatherData: WeatherData) {
+        weatherUseCase.saveWeatherData(weatherData)
+    }
+    func fetchSavedWeatherData() -> [WeatherInfo] {
+        return weatherUseCase.fetchSavedWeatherData()
     }
 }

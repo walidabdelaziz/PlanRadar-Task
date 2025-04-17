@@ -12,7 +12,8 @@ import RxCocoa
 class SearchVC: UIViewController {
 
     let disposeBag = DisposeBag()
-    let weatherViewModel = WeatherViewModel(weatherService: WeatherService(networkService: NetworkManager()))
+    let weatherViewModel = WeatherViewModel(weatherService: WeatherService(networkService: NetworkManager()),
+                                            weatherUseCase: WeatherUseCase(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext))
 
     @IBOutlet weak var messageLbl: UILabel!
     @IBOutlet weak var resultsTV: UITableView!
@@ -40,7 +41,7 @@ class SearchVC: UIViewController {
         resultsTV.register(UINib(nibName: "CitiesTVCell", bundle: nil), forCellReuseIdentifier: "CitiesTVCell")
     }
     func bindUI(){
-        // bind loader
+        // bind loader indicator
         weatherViewModel.isLoading
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] isLoading in
@@ -48,12 +49,14 @@ class SearchVC: UIViewController {
                 isLoading ? self.view.showLoader() : self.view.hideLoader()
             })
             .disposed(by: disposeBag)
+        
         // bind cancel button
         cancelBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
                 self.dismiss(animated: true)
             }).disposed(by: disposeBag)
+        
         // bind search text field
         searchTF.rx.text.orEmpty
             .debounce(.milliseconds(600), scheduler: MainScheduler.instance)
@@ -90,5 +93,16 @@ class SearchVC: UIViewController {
                 cell.weatherData = weatherData
             }
             .disposed(by: disposeBag)
+        
+        // handle tableview selection
+        Observable.zip(
+            resultsTV.rx.modelSelected(WeatherData.self),
+            resultsTV.rx.itemSelected
+        )
+        .subscribe(onNext: { [weak self] weatherData, indexPath in
+            guard let self = self else { return }
+            self.weatherViewModel.saveWeatherData(weatherData: weatherData)
+        })
+        .disposed(by: disposeBag)
     }
 }
