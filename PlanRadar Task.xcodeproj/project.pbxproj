@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CBEC95882DB1064A00C0B28E /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC957B2DB1064A00C0B28E /* SplashVC.swift */; };
+		CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95822DB1064A00C0B28E /* AppDelegate.swift */; };
+		CBEC958A2DB1064A00C0B28E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEC957E2DB1064A00C0B28E /* Main.storyboard */; };
+		CBEC958B2DB1064A00C0B28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEC95832DB1064A00C0B28E /* Assets.xcassets */; };
+		CBEC958D2DB1064A00C0B28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEC95862DB1064A00C0B28E /* LaunchScreen.storyboard */; };
+		CBEC95942DB1066700C0B28E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95922DB1066700C0B28E /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CBEC95452DB100CD00C0B28E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,27 +36,16 @@
 		CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlanRadar Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEC95442DB100CD00C0B28E /* PlanRadar TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlanRadar TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEC954E2DB100CD00C0B28E /* PlanRadar TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlanRadar TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEC957B2DB1064A00C0B28E /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		CBEC957D2DB1064A00C0B28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBEC95822DB1064A00C0B28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBEC95832DB1064A00C0B28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBEC95842DB1064A00C0B28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEC95852DB1064A00C0B28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBEC95922DB1066700C0B28E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CBEC95562DB100CD00C0B28E /* Exceptions for "PlanRadar Task" folder in "PlanRadar Task" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = CBEC952D2DB100CB00C0B28E /* PlanRadar Task */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CBEC95302DB100CB00C0B28E /* PlanRadar Task */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				CBEC95562DB100CD00C0B28E /* Exceptions for "PlanRadar Task" folder in "PlanRadar Task" target */,
-			);
-			path = "PlanRadar Task";
-			sourceTree = "<group>";
-		};
 		CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "PlanRadar TaskTests";
@@ -88,7 +86,7 @@
 		CBEC95252DB100CB00C0B28E = {
 			isa = PBXGroup;
 			children = (
-				CBEC95302DB100CB00C0B28E /* PlanRadar Task */,
+				CBEC95872DB1064A00C0B28E /* PlanRadar Task */,
 				CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */,
 				CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */,
 				CBEC952F2DB100CB00C0B28E /* Products */,
@@ -105,6 +103,60 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CBEC957C2DB1064A00C0B28E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC957B2DB1064A00C0B28E /* SplashVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CBEC957F2DB1064A00C0B28E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC957E2DB1064A00C0B28E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CBEC95802DB1064A00C0B28E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC957F2DB1064A00C0B28E /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBEC95812DB1064A00C0B28E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC957C2DB1064A00C0B28E /* Controllers */,
+				CBEC95802DB1064A00C0B28E /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CBEC95872DB1064A00C0B28E /* PlanRadar Task */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95822DB1064A00C0B28E /* AppDelegate.swift */,
+				CBEC95932DB1066700C0B28E /* Helper */,
+				CBEC95812DB1064A00C0B28E /* Presentation */,
+				CBEC95832DB1064A00C0B28E /* Assets.xcassets */,
+				CBEC95842DB1064A00C0B28E /* Info.plist */,
+				CBEC95862DB1064A00C0B28E /* LaunchScreen.storyboard */,
+			);
+			path = "PlanRadar Task";
+			sourceTree = "<group>";
+		};
+		CBEC95932DB1066700C0B28E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95922DB1066700C0B28E /* Extensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +171,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CBEC95302DB100CB00C0B28E /* PlanRadar Task */,
 			);
 			name = "PlanRadar Task";
 			packageProductDependencies = (
@@ -225,6 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC958A2DB1064A00C0B28E /* Main.storyboard in Resources */,
+				CBEC958B2DB1064A00C0B28E /* Assets.xcassets in Resources */,
+				CBEC958D2DB1064A00C0B28E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC95882DB1064A00C0B28E /* SplashVC.swift in Sources */,
+				CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */,
+				CBEC95942DB1066700C0B28E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +335,25 @@
 			targetProxy = CBEC954F2DB100CD00C0B28E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBEC957E2DB1064A00C0B28E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBEC957D2DB1064A00C0B28E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBEC95862DB1064A00C0B28E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBEC95852DB1064A00C0B28E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBEC95582DB100CD00C0B28E /* Debug */ = {

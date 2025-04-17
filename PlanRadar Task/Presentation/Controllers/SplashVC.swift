@@ -19,7 +19,7 @@ class SplashVC: UIViewController {
         setupUI()
     }
     func setupUI(){
-//        titleLbl.textColor = .PrimaryColor
+        titleLbl.textColor = .PrimaryColor
         timer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
     }
     @objc func updateUI(){
