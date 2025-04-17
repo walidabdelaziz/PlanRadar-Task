@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c68-kk-5Bq">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplashVC-->
+        <scene sceneID="in3-Ni-CDQ">
+            <objects>
+                <viewController storyboardIdentifier="SplashVC" id="vE8-oO-bZL" customClass="SplashVC" customModule="PlanRadar_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vTN-kf-4bR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanRadar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ada-cp-0Yr">
+                                <rect key="frame" x="16" y="393.66666666666669" width="361" height="64.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mta-uG-4Te"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ada-cp-0Yr" firstAttribute="centerX" secondItem="vTN-kf-4bR" secondAttribute="centerX" id="BWf-Aq-VwS"/>
+                            <constraint firstItem="Ada-cp-0Yr" firstAttribute="centerY" secondItem="vTN-kf-4bR" secondAttribute="centerY" id="hvv-JK-F2B"/>
+                            <constraint firstItem="mta-uG-4Te" firstAttribute="trailing" secondItem="Ada-cp-0Yr" secondAttribute="trailing" constant="16" id="rJB-eP-MOx"/>
+                            <constraint firstItem="Ada-cp-0Yr" firstAttribute="leading" secondItem="mta-uG-4Te" secondAttribute="leading" constant="16" id="wNf-Bh-3hB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uxq-XM-UZ6"/>
+                    <connections>
+                        <outlet property="titleLbl" destination="Ada-cp-0Yr" id="cXK-hb-Jdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OO7-PT-nwg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738.1679389312976" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1bY-27-utC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c68-kk-5Bq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xtV-sj-zZ5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vE8-oO-bZL" kind="relationship" relationship="rootViewController" id="L35-rO-cil"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4D-Km-qep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811.45038167938924" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
