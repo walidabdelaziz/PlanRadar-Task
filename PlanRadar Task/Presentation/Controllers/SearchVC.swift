@@ -40,21 +40,32 @@ class SearchVC: UIViewController {
         resultsTV.register(UINib(nibName: "CitiesTVCell", bundle: nil), forCellReuseIdentifier: "CitiesTVCell")
     }
     func bindUI(){
+        // bind loader
+        weatherViewModel.isLoading
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isLoading in
+                guard let self = self else { return }
+                isLoading ? self.view.showLoader() : self.view.hideLoader()
+            })
+            .disposed(by: disposeBag)
         // bind cancel button
         cancelBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
                 self.dismiss(animated: true)
             }).disposed(by: disposeBag)
-        
         // bind search text field
         searchTF.rx.text.orEmpty
             .debounce(.milliseconds(600), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .filter { !$0.isEmpty }
             .subscribe(onNext: { [weak self] text in
                 guard let self = self else {return}
-                self.weatherViewModel.getWeatherData(searchText: text)
+                if text.isEmpty {
+                    self.resultsTV.isHidden = true
+                    self.messageLbl.isHidden = true
+                } else {
+                    self.weatherViewModel.getWeatherData(searchText: text)
+                }
             })
             .disposed(by: disposeBag)
         

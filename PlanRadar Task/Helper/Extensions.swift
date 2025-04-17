@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import NVActivityIndicatorView
 
 extension UIColor {
     convenience init(hexString: String) {
@@ -36,6 +37,7 @@ extension UIColor {
         return UIColor(hexString: "#e8e6eb")
     }
 }
+private var loaderKey: UInt8 = 0
 extension UIView {
     func dropShadow(radius: CGFloat, opacity: Float = 0.3, offset: CGSize = CGSize(width: 1.5, height: 3)) {
         layer.masksToBounds = false
@@ -44,6 +46,30 @@ extension UIView {
         layer.shadowOffset = offset
         layer.shadowRadius = radius
         layer.rasterizationScale = UIScreen.main.scale
+    }
+    private var loader: NVActivityIndicatorView? {
+        get { objc_getAssociatedObject(self, &loaderKey) as? NVActivityIndicatorView }
+        set { objc_setAssociatedObject(self, &loaderKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+    }
+
+    func showLoader() {
+        guard loader == nil else { return }
+
+        let width = frame.width * 0.15
+        let frame = CGRect(
+            origin: CGPoint(x: self.frame.midX - width / 2, y: self.frame.midY - width / 2),
+            size: CGSize(width: width, height: width)
+        )
+        let activityIndicator = NVActivityIndicatorView(frame: frame, type: .ballBeat, color: .primaryColor, padding: 8)
+        addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        self.loader = activityIndicator
+    }
+
+    func hideLoader() {
+        loader?.stopAnimating()
+        loader?.removeFromSuperview()
+        loader = nil
     }
 }
 extension UITextField {

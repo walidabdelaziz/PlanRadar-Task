@@ -28,6 +28,8 @@
 		CBEC95C72DB128E400C0B28E /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95C62DB128DE00C0B28E /* WeatherService.swift */; };
 		CBEC95CA2DB12A6B00C0B28E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */; };
 		CBEC95CC2DB1305700C0B28E /* GenericModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95CB2DB1305400C0B28E /* GenericModel.swift */; };
+		CBEC95CF2DB137E900C0B28E /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95CE2DB137E900C0B28E /* NVActivityIndicatorView */; };
+		CBEC95D12DB137E900C0B28E /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95D02DB137E900C0B28E /* NVActivityIndicatorViewExtended */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +92,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */,
+				CBEC95CF2DB137E900C0B28E /* NVActivityIndicatorView in Frameworks */,
 				CBEC95BF2DB1259600C0B28E /* IQKeyboardManagerSwift in Frameworks */,
+				CBEC95D12DB137E900C0B28E /* NVActivityIndicatorViewExtended in Frameworks */,
 				CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */,
 				CBEC95A62DB10A9D00C0B28E /* Alamofire in Frameworks */,
 			);
@@ -283,6 +287,8 @@
 				CBEC95B92DB1216100C0B28E /* RxCocoa */,
 				CBEC95BB2DB1216100C0B28E /* RxSwift */,
 				CBEC95BE2DB1259600C0B28E /* IQKeyboardManagerSwift */,
+				CBEC95CE2DB137E900C0B28E /* NVActivityIndicatorView */,
+				CBEC95D02DB137E900C0B28E /* NVActivityIndicatorViewExtended */,
 			);
 			productName = "PlanRadar Task";
 			productReference = CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */;
@@ -370,6 +376,7 @@
 				CBEC95A42DB10A9D00C0B28E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				CBEC95BD2DB1259600C0B28E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				CBEC95CD2DB137E900C0B28E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CBEC952F2DB100CB00C0B28E /* Products */;
@@ -794,6 +801,14 @@
 				minimumVersion = 8.0.1;
 			};
 		};
+		CBEC95CD2DB137E900C0B28E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -816,6 +831,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBEC95BD2DB1259600C0B28E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		CBEC95CE2DB137E900C0B28E /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEC95CD2DB137E900C0B28E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		CBEC95D02DB137E900C0B28E /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEC95CD2DB137E900C0B28E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
