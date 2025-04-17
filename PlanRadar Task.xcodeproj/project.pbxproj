@@ -16,6 +16,7 @@
 		CBEC95A62DB10A9D00C0B28E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95A52DB10A9D00C0B28E /* Alamofire */; };
 		CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95A72DB10E8300C0B28E /* NetworkManager.swift */; };
 		CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95AB2DB10F1400C0B28E /* AppSecrets.swift */; };
+		CBEC95AE2DB1103600C0B28E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95AD2DB1103400C0B28E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		CBEC95922DB1066700C0B28E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CBEC95A72DB10E8300C0B28E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CBEC95AB2DB10F1400C0B28E /* AppSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecrets.swift; sourceTree = "<group>"; };
+		CBEC95AD2DB1103400C0B28E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEC95922DB1066700C0B28E /* Extensions.swift */,
+				CBEC95AD2DB1103400C0B28E /* Constants.swift */,
 				CBEC95AB2DB10F1400C0B28E /* AppSecrets.swift */,
 			);
 			path = Helper;
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */,
+				CBEC95AE2DB1103600C0B28E /* Constants.swift in Sources */,
 				CBEC95882DB1064A00C0B28E /* SplashVC.swift in Sources */,
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,
 				CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */,
