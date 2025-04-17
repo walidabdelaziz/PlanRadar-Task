@@ -17,6 +17,9 @@
 		CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95A72DB10E8300C0B28E /* NetworkManager.swift */; };
 		CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95AB2DB10F1400C0B28E /* AppSecrets.swift */; };
 		CBEC95AE2DB1103600C0B28E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95AD2DB1103400C0B28E /* Constants.swift */; };
+		CBEC95B02DB111A800C0B28E /* CitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */; };
+		CBEC95B42DB11A2300C0B28E /* CitiesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */; };
+		CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		CBEC95A72DB10E8300C0B28E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CBEC95AB2DB10F1400C0B28E /* AppSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecrets.swift; sourceTree = "<group>"; };
 		CBEC95AD2DB1103400C0B28E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesVC.swift; sourceTree = "<group>"; };
+		CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVCell.swift; sourceTree = "<group>"; };
+		CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEC957B2DB1064A00C0B28E /* SplashVC.swift */,
+				CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 		CBEC95802DB1064A00C0B28E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CBEC95B12DB11A0200C0B28E /* Cells */,
 				CBEC957F2DB1064A00C0B28E /* Storyboards */,
 			);
 			path = Views;
@@ -182,6 +190,15 @@
 				CBEC95A82DB10E8300C0B28E /* Network */,
 			);
 			path = "DataLayer ";
+			sourceTree = "<group>";
+		};
+		CBEC95B12DB11A0200C0B28E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */,
+				CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC95B42DB11A2300C0B28E /* CitiesTVCell.xib in Resources */,
 				CBEC958A2DB1064A00C0B28E /* Main.storyboard in Resources */,
 				CBEC958B2DB1064A00C0B28E /* Assets.xcassets in Resources */,
 				CBEC958D2DB1064A00C0B28E /* LaunchScreen.storyboard in Resources */,
@@ -332,7 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */,
 				CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */,
+				CBEC95B02DB111A800C0B28E /* CitiesVC.swift in Sources */,
 				CBEC95AE2DB1103600C0B28E /* Constants.swift in Sources */,
 				CBEC95882DB1064A00C0B28E /* SplashVC.swift in Sources */,
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,

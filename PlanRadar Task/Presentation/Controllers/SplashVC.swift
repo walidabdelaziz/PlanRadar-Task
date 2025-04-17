@@ -19,7 +19,7 @@ class SplashVC: UIViewController {
         setupUI()
     }
     func setupUI(){
-        titleLbl.textColor = .PrimaryColor
+        titleLbl.textColor = .primaryColor
         timer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
     }
     @objc func updateUI(){
@@ -34,8 +34,8 @@ class SplashVC: UIViewController {
         }
     }
     @objc func showVC(){
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let MainVC = storyboard.instantiateViewController(withIdentifier: "TabBarController")
-//        navigationController?.pushViewController(MainVC, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let CitiesVC = storyboard.instantiateViewController(withIdentifier: "CitiesVC")
+        navigationController?.pushViewController(CitiesVC, animated: true)
     }
 }

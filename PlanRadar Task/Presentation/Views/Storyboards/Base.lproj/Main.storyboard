@@ -44,10 +44,9 @@
         <!--Navigation Controller-->
         <scene sceneID="1bY-27-utC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c68-kk-5Bq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="c68-kk-5Bq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xtV-sj-zZ5">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -59,8 +58,56 @@
             </objects>
             <point key="canvasLocation" x="811.45038167938924" y="3.5211267605633805"/>
         </scene>
+        <!--CitiesVC-->
+        <scene sceneID="sLN-cT-00j">
+            <objects>
+                <viewController storyboardIdentifier="CitiesVC" id="xMf-NB-XLt" customClass="CitiesVC" customModule="PlanRadar_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Xc-Wb-3WR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISi-sU-Wam">
+                                <rect key="frame" x="166" y="71" width="61.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYf-B0-5Cb">
+                                <rect key="frame" x="333" y="59.666666666666657" width="60" height="67"/>
+                                <state key="normal" image="plusIcon"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-xR-9m7">
+                                <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="691.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a7X-Hw-CBZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a7X-Hw-CBZ" firstAttribute="trailing" secondItem="WYf-B0-5Cb" secondAttribute="trailing" id="1j3-nu-OzP"/>
+                            <constraint firstItem="ISi-sU-Wam" firstAttribute="top" secondItem="a7X-Hw-CBZ" secondAttribute="top" constant="12" id="2yI-Lz-4Zv"/>
+                            <constraint firstItem="4bY-xR-9m7" firstAttribute="trailing" secondItem="a7X-Hw-CBZ" secondAttribute="trailing" id="ELW-rP-3AN"/>
+                            <constraint firstItem="WYf-B0-5Cb" firstAttribute="centerY" secondItem="ISi-sU-Wam" secondAttribute="centerY" constant="10" id="GEV-ka-Jqp"/>
+                            <constraint firstItem="4bY-xR-9m7" firstAttribute="leading" secondItem="a7X-Hw-CBZ" secondAttribute="leading" id="Gyq-iG-TPU"/>
+                            <constraint firstItem="ISi-sU-Wam" firstAttribute="centerX" secondItem="a7X-Hw-CBZ" secondAttribute="centerX" id="ahs-TA-Ahr"/>
+                            <constraint firstItem="a7X-Hw-CBZ" firstAttribute="bottom" secondItem="4bY-xR-9m7" secondAttribute="bottom" id="c9W-JV-5CU"/>
+                            <constraint firstItem="4bY-xR-9m7" firstAttribute="top" secondItem="WYf-B0-5Cb" secondAttribute="bottom" id="yxD-Dc-vt0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bfx-oc-os6"/>
+                    <connections>
+                        <outlet property="addBtn" destination="WYf-B0-5Cb" id="cta-Wy-sQR"/>
+                        <outlet property="citiesTV" destination="4bY-xR-9m7" id="1u2-gC-zvh"/>
+                        <outlet property="titleLbl" destination="ISi-sU-Wam" id="IuX-V2-eHn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1TY-vJ-y6k" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549" y="4"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="plusIcon" width="60" height="67"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

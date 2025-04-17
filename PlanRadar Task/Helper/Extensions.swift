@@ -26,8 +26,11 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
-    @nonobjc class var PrimaryColor: UIColor {
+    @nonobjc class var primaryColor: UIColor {
         return UIColor(hexString: "#2388C7")
+    }
+    @nonobjc class var secondaryColor: UIColor {
+        return UIColor(hexString: "#3d4548")
     }
 }
 extension UIView {
