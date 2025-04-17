@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
+protocol HistoryProtocol{
+    func didPressHistoryBtn(_ sender: UIButton)
+}
 class CitiesTVCell: UITableViewCell {
 
+    let disposeBag = DisposeBag()
+    var historyDelegate: HistoryProtocol?
+    
     var weatherData: WeatherData? {
         didSet {
             guard let weatherData = weatherData else { return }
@@ -23,11 +31,21 @@ class CitiesTVCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var historyBtn: UIButton!
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         titleLbl.textColor = .secondaryColor
-        
+        bindUI()
+    }
+    func bindUI(){
+        // bind history button
+        historyBtn.rx.tap
+            .bind(onNext: { [weak self] in
+                guard let self = self else{return}
+                self.historyDelegate?.didPressHistoryBtn(historyBtn)
+            }).disposed(by: disposeBag)
+
     }
 }

@@ -35,7 +35,7 @@ class SplashVC: UIViewController {
     }
     @objc func showVC(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let CitiesVC = storyboard.instantiateViewController(withIdentifier: "CitiesVC")
-        navigationController?.pushViewController(CitiesVC, animated: true)
+        let citiesVC = storyboard.instantiateViewController(withIdentifier: "CitiesVC")
+        navigationController?.pushViewController(citiesVC, animated: true)
     }
 }

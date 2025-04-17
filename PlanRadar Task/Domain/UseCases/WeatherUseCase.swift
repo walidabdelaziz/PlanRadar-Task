@@ -41,7 +41,7 @@ final class WeatherUseCase: WeatherUseCaseProtocol {
             let weatherInfo = WeatherInfo(context: context)
             weatherInfo.temperature = weatherData.main?.temp ?? 0.0
             weatherInfo.humidity = Int64(weatherData.main?.humidity ?? 0)
-            weatherInfo.desc = weatherData.weather?.first?.description ?? ""
+            weatherInfo.desc = weatherData.weather?.first?.main ?? ""
             weatherInfo.date = Date()
             weatherInfo.city = city
 

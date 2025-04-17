@@ -193,8 +193,56 @@
             </objects>
             <point key="canvasLocation" x="3305" y="4"/>
         </scene>
+        <!--HistoryVC-->
+        <scene sceneID="1kZ-lE-IYw">
+            <objects>
+                <viewController storyboardIdentifier="HistoryVC" id="iux-aw-Ijs" customClass="HistoryVC" customModule="PlanRadar_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m42-0w-Wr7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVD-3L-s6T">
+                                <rect key="frame" x="166" y="71" width="61.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-sn-duH">
+                                <rect key="frame" x="0.0" y="60" width="60" height="66"/>
+                                <state key="normal" image="backIcon"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-uZ-Ero">
+                                <rect key="frame" x="0.0" y="126" width="393" height="692"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WTx-tb-Ft8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oQP-sn-duH" firstAttribute="leading" secondItem="m42-0w-Wr7" secondAttribute="leading" id="04u-Kk-2rl"/>
+                            <constraint firstItem="f7N-uZ-Ero" firstAttribute="top" secondItem="oQP-sn-duH" secondAttribute="bottom" id="1UU-qk-kJD"/>
+                            <constraint firstItem="VVD-3L-s6T" firstAttribute="centerX" secondItem="WTx-tb-Ft8" secondAttribute="centerX" id="2T8-hI-Sij"/>
+                            <constraint firstItem="f7N-uZ-Ero" firstAttribute="leading" secondItem="WTx-tb-Ft8" secondAttribute="leading" id="8q3-HR-XAD"/>
+                            <constraint firstItem="f7N-uZ-Ero" firstAttribute="trailing" secondItem="WTx-tb-Ft8" secondAttribute="trailing" id="AEZ-1R-JkR"/>
+                            <constraint firstItem="WTx-tb-Ft8" firstAttribute="bottom" secondItem="f7N-uZ-Ero" secondAttribute="bottom" id="H4Y-Yp-Zoj"/>
+                            <constraint firstItem="oQP-sn-duH" firstAttribute="centerY" secondItem="VVD-3L-s6T" secondAttribute="centerY" constant="10" id="QYy-zZ-2yU"/>
+                            <constraint firstItem="VVD-3L-s6T" firstAttribute="top" secondItem="WTx-tb-Ft8" secondAttribute="top" constant="12" id="uZG-sE-5YI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ayi-8p-XzL"/>
+                    <connections>
+                        <outlet property="addBtn" destination="oQP-sn-duH" id="1Ne-1B-o2b"/>
+                        <outlet property="citiesTV" destination="f7N-uZ-Ero" id="0fR-2i-gkd"/>
+                        <outlet property="titleLbl" destination="VVD-3L-s6T" id="XV8-ce-Adl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRI-OO-5bd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3995" y="4"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backIcon" width="60" height="66"/>
         <image name="plusIcon" width="60" height="67"/>
         <image name="searchIcon" width="20.666666030883789" height="20.666666030883789"/>
         <systemColor name="systemBackgroundColor">

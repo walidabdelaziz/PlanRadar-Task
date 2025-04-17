@@ -88,58 +88,20 @@ extension UITextField {
         self.rightViewMode = .always
     }
 }
-
-extension UIApplication {
-    class func tryURL(urls: [String]) {
-        let application = UIApplication.shared
-        for url in urls {
-            if application.canOpenURL(NSURL(string: url)! as URL) {
-                if #available(iOS 10.0, *) {
-                    application.open(URL(string: url)!, options: [:], completionHandler: nil)
-                } else {
-                    // Fallback on earlier versions
-                    application.openURL(URL(string: url)!)
-                }
-                return
-            }
-        }
+extension Date {
+    func toString(format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter.string(from: self)
+    }
+}
+extension Double {
+    var toCelsius: Double {
+        return self - 273.15
+    }
+    var toCelsiusString: String {
+        return String(format: "%.1f°C", self.toCelsius)
     }
 }
 
-extension UIColor {
-    
-    @nonobjc class var PrimaryColor: UIColor {
-        return UIColor(hexString: "#3484F0")
-    }
-    @nonobjc class var SecondaryColor: UIColor {
-        return UIColor(hexString: "#F33829")
-    }
-    @nonobjc class var black55: UIColor {
-        return UIColor(white: 0.0, alpha: 0.55)
-    }
-    @nonobjc class var PlaceHolderColor: UIColor {
-        return UIColor(hexString: "#707070")
-    }
-}
-extension UIDevice{
-    var hasTopNotch: Bool {
-        if #available(iOS 11.0, tvOS 11.0, *) {
-            return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0 > 20
-        }
-        return false
-    }
-}
-
-extension UIFont {
-    
-    static func noc_mediumSystemFont(ofSize fontSize: CGFloat) -> UIFont {
-        var font: UIFont
-        if #available(iOS 8.2, *) {
-            font = UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.medium)
-        } else {
-            font = UIFont(name: "HelveticaNeue-Medium", size: fontSize)!
-        }
-        return font
-    }
-    
-}

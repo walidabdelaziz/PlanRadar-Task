@@ -15,6 +15,7 @@ class WeatherViewModel {
     let isLoading = BehaviorRelay<Bool>(value: false)
     var weatherData = BehaviorRelay<WeatherData>(value: WeatherData())
     var savedWeatherData = BehaviorRelay<[GroupedWeatherInfo]>(value: [])
+    var cityHistory = BehaviorRelay<GroupedWeatherInfo?>(value: nil)
 
     private let weatherService: WeatherProtocol
     private let weatherUseCase: WeatherUseCaseProtocol

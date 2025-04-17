@@ -35,6 +35,9 @@
 		CBEC961A2DB1544500C0B28E /* PlanRadar_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */; };
 		CBEC961B2DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */; };
 		CBEC961D2DB1658600C0B28E /* WeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */; };
+		CBEC961F2DB174A700C0B28E /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC961E2DB174A700C0B28E /* HistoryVC.swift */; };
+		CBEC96242DB177FA00C0B28E /* HistoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */; };
+		CBEC96252DB177FA00C0B28E /* HistoryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskUITests.swift; sourceTree = "<group>"; };
 		CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCase.swift; sourceTree = "<group>"; };
+		CBEC961E2DB174A700C0B28E /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVCell.swift; sourceTree = "<group>"; };
+		CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				CBEC957B2DB1064A00C0B28E /* SplashVC.swift */,
 				CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */,
 				CBEC95B62DB11BB800C0B28E /* SearchVC.swift */,
+				CBEC961E2DB174A700C0B28E /* HistoryVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +225,8 @@
 			children = (
 				CBEC95B22DB11A2300C0B28E /* CitiesTVCell.swift */,
 				CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */,
+				CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */,
+				CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 				CBEC95B42DB11A2300C0B28E /* CitiesTVCell.xib in Resources */,
 				CBEC958A2DB1064A00C0B28E /* Main.storyboard in Resources */,
 				CBEC958B2DB1064A00C0B28E /* Assets.xcassets in Resources */,
+				CBEC96252DB177FA00C0B28E /* HistoryTVCell.xib in Resources */,
 				CBEC958D2DB1064A00C0B28E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,9 +445,11 @@
 			files = (
 				CBEC95B52DB11A2300C0B28E /* CitiesTVCell.swift in Sources */,
 				CBEC95CA2DB12A6B00C0B28E /* WeatherViewModel.swift in Sources */,
+				CBEC96242DB177FA00C0B28E /* HistoryTVCell.swift in Sources */,
 				CBEC96072DB152CC00C0B28E /* Weather.xcdatamodeld in Sources */,
 				CBEC95AA2DB10E8300C0B28E /* NetworkManager.swift in Sources */,
 				CBEC95C72DB128E400C0B28E /* WeatherService.swift in Sources */,
+				CBEC961F2DB174A700C0B28E /* HistoryVC.swift in Sources */,
 				CBEC95CC2DB1305700C0B28E /* GenericModel.swift in Sources */,
 				CBEC95B02DB111A800C0B28E /* CitiesVC.swift in Sources */,
 				CBEC95B72DB11BB800C0B28E /* SearchVC.swift in Sources */,

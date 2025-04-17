@@ -43,24 +43,22 @@ class CitiesVC: UIViewController {
         
         // bind weather data
         weatherViewModel.savedWeatherData
-//            .map { [weak self] weatherData -> [WeatherData] in
-//                guard let self = self else { return [] }
-//                if weatherData.cod?.intValue != 200{
-//                    self.messageLbl.text = weatherData.message
-//                    return []
-//                }
-//                return [weatherData]
-//            }
             .observe(on: MainScheduler.instance)
-            .do(onNext: { [weak self] data in
-                guard let self = self else { return }
-//                self.resultsTV.isHidden = data.isEmpty
-//                self.messageLbl.isHidden = !data.isEmpty
-            })
             .bind(to: citiesTV.rx.items(cellIdentifier: "CitiesTVCell", cellType: CitiesTVCell.self)) { row, savedWeatherData, cell in
                 cell.selectionStyle = .none
+                cell.historyBtn.tag = row
+                cell.historyDelegate = self
                 cell.savedWeatherData = savedWeatherData
             }
             .disposed(by: disposeBag)
+    }
+}
+extension CitiesVC: HistoryProtocol {
+    func didPressHistoryBtn(_ sender: UIButton) {
+        weatherViewModel.cityHistory.accept(weatherViewModel.savedWeatherData.value[sender.tag])
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let historyVC = storyboard.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryVC
+        historyVC.weatherViewModel = weatherViewModel
+        present(historyVC, animated: true, completion: nil)
     }
 }
