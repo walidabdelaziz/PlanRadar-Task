@@ -11,5 +11,7 @@
 	</dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    <key>OPEN_WEATHER_API_KEY</key>
+    <string>f5cb0b965ea1564c50c6f1b74534d823</string>
 </dict>
 </plist>
