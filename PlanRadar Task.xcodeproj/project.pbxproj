@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		CBEC95452DB100CD00C0B28E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBEC95262DB100CB00C0B28E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBEC952D2DB100CB00C0B28E;
+			remoteInfo = "PlanRadar Task";
+		};
+		CBEC954F2DB100CD00C0B28E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBEC95262DB100CB00C0B28E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBEC952D2DB100CB00C0B28E;
+			remoteInfo = "PlanRadar Task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlanRadar Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEC95442DB100CD00C0B28E /* PlanRadar TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlanRadar TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEC954E2DB100CD00C0B28E /* PlanRadar TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PlanRadar TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CBEC95562DB100CD00C0B28E /* Exceptions for "PlanRadar Task" folder in "PlanRadar Task" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CBEC952D2DB100CB00C0B28E /* PlanRadar Task */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CBEC95302DB100CB00C0B28E /* PlanRadar Task */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CBEC95562DB100CD00C0B28E /* Exceptions for "PlanRadar Task" folder in "PlanRadar Task" target */,
+			);
+			path = "PlanRadar Task";
+			sourceTree = "<group>";
+		};
+		CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PlanRadar TaskTests";
+			sourceTree = "<group>";
+		};
+		CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PlanRadar TaskUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBEC952B2DB100CB00C0B28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC95412DB100CD00C0B28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC954B2DB100CD00C0B28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBEC95252DB100CB00C0B28E = {
+			isa = PBXGroup;
+			children = (
+				CBEC95302DB100CB00C0B28E /* PlanRadar Task */,
+				CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */,
+				CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */,
+				CBEC952F2DB100CB00C0B28E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBEC952F2DB100CB00C0B28E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */,
+				CBEC95442DB100CD00C0B28E /* PlanRadar TaskTests.xctest */,
+				CBEC954E2DB100CD00C0B28E /* PlanRadar TaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBEC952D2DB100CB00C0B28E /* PlanRadar Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEC95572DB100CD00C0B28E /* Build configuration list for PBXNativeTarget "PlanRadar Task" */;
+			buildPhases = (
+				CBEC952A2DB100CB00C0B28E /* Sources */,
+				CBEC952B2DB100CB00C0B28E /* Frameworks */,
+				CBEC952C2DB100CB00C0B28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CBEC95302DB100CB00C0B28E /* PlanRadar Task */,
+			);
+			name = "PlanRadar Task";
+			packageProductDependencies = (
+			);
+			productName = "PlanRadar Task";
+			productReference = CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBEC95432DB100CD00C0B28E /* PlanRadar TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEC955C2DB100CD00C0B28E /* Build configuration list for PBXNativeTarget "PlanRadar TaskTests" */;
+			buildPhases = (
+				CBEC95402DB100CD00C0B28E /* Sources */,
+				CBEC95412DB100CD00C0B28E /* Frameworks */,
+				CBEC95422DB100CD00C0B28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBEC95462DB100CD00C0B28E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CBEC95472DB100CD00C0B28E /* PlanRadar TaskTests */,
+			);
+			name = "PlanRadar TaskTests";
+			packageProductDependencies = (
+			);
+			productName = "PlanRadar TaskTests";
+			productReference = CBEC95442DB100CD00C0B28E /* PlanRadar TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBEC954D2DB100CD00C0B28E /* PlanRadar TaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBEC955F2DB100CD00C0B28E /* Build configuration list for PBXNativeTarget "PlanRadar TaskUITests" */;
+			buildPhases = (
+				CBEC954A2DB100CD00C0B28E /* Sources */,
+				CBEC954B2DB100CD00C0B28E /* Frameworks */,
+				CBEC954C2DB100CD00C0B28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBEC95502DB100CD00C0B28E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CBEC95512DB100CD00C0B28E /* PlanRadar TaskUITests */,
+			);
+			name = "PlanRadar TaskUITests";
+			packageProductDependencies = (
+			);
+			productName = "PlanRadar TaskUITests";
+			productReference = CBEC954E2DB100CD00C0B28E /* PlanRadar TaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBEC95262DB100CB00C0B28E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					CBEC952D2DB100CB00C0B28E = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					CBEC95432DB100CD00C0B28E = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = CBEC952D2DB100CB00C0B28E;
+					};
+					CBEC954D2DB100CD00C0B28E = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = CBEC952D2DB100CB00C0B28E;
+					};
+				};
+			};
+			buildConfigurationList = CBEC95292DB100CB00C0B28E /* Build configuration list for PBXProject "PlanRadar Task" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBEC95252DB100CB00C0B28E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CBEC952F2DB100CB00C0B28E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBEC952D2DB100CB00C0B28E /* PlanRadar Task */,
+				CBEC95432DB100CD00C0B28E /* PlanRadar TaskTests */,
+				CBEC954D2DB100CD00C0B28E /* PlanRadar TaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBEC952C2DB100CB00C0B28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC95422DB100CD00C0B28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC954C2DB100CD00C0B28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBEC952A2DB100CB00C0B28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC95402DB100CD00C0B28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBEC954A2DB100CD00C0B28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBEC95462DB100CD00C0B28E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBEC952D2DB100CB00C0B28E /* PlanRadar Task */;
+			targetProxy = CBEC95452DB100CD00C0B28E /* PBXContainerItemProxy */;
+		};
+		CBEC95502DB100CD00C0B28E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBEC952D2DB100CB00C0B28E /* PlanRadar Task */;
+			targetProxy = CBEC954F2DB100CD00C0B28E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CBEC95582DB100CD00C0B28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PlanRadar Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PlanRadar-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBEC95592DB100CD00C0B28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PlanRadar Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PlanRadar-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBEC955A2DB100CD00C0B28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBEC955B2DB100CD00C0B28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBEC955D2DB100CD00C0B28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PlanRadar-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanRadar Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanRadar Task";
+			};
+			name = Debug;
+		};
+		CBEC955E2DB100CD00C0B28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PlanRadar-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanRadar Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanRadar Task";
+			};
+			name = Release;
+		};
+		CBEC95602DB100CD00C0B28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PlanRadar-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PlanRadar Task";
+			};
+			name = Debug;
+		};
+		CBEC95612DB100CD00C0B28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PlanRadar-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PlanRadar Task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBEC95292DB100CB00C0B28E /* Build configuration list for PBXProject "PlanRadar Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC955A2DB100CD00C0B28E /* Debug */,
+				CBEC955B2DB100CD00C0B28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBEC95572DB100CD00C0B28E /* Build configuration list for PBXNativeTarget "PlanRadar Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC95582DB100CD00C0B28E /* Debug */,
+				CBEC95592DB100CD00C0B28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBEC955C2DB100CD00C0B28E /* Build configuration list for PBXNativeTarget "PlanRadar TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC955D2DB100CD00C0B28E /* Debug */,
+				CBEC955E2DB100CD00C0B28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBEC955F2DB100CD00C0B28E /* Build configuration list for PBXNativeTarget "PlanRadar TaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEC95602DB100CD00C0B28E /* Debug */,
+				CBEC95612DB100CD00C0B28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBEC95262DB100CB00C0B28E /* Project object */;
+}
