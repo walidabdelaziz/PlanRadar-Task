@@ -23,7 +23,10 @@ class CitiesVC: UIViewController {
         setupUI()
         configureTableView()
         bindUI()
-        weatherViewModel.fetchSavedWeatherData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        weatherViewModel.fetchSavedCities()
     }
     func setupUI(){
         titleLbl.textColor = .secondaryColor
@@ -42,7 +45,7 @@ class CitiesVC: UIViewController {
                     guard let self = self else{return}
                     self.dismiss(animated: true){
                         if confirmed {
-                            self.weatherViewModel.fetchSavedWeatherData()
+                            self.weatherViewModel.fetchSavedCities()
                         }
                     }
                 }

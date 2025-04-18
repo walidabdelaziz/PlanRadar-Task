@@ -42,12 +42,12 @@ class WeatherViewModel {
     func saveWeatherData(weatherData: WeatherData) {
         weatherUseCase.saveWeatherData(weatherData)
     }
-    func fetchSavedWeatherData() {
+    func fetchSavedCities() {
         let grouped = weatherUseCase.fetchGroupedWeatherDataByCityId()
         savedCities.accept(grouped)
     }
     func fetchWeatherAttributes(){
-        weatherAttributes.accept(weatherUseCase.convertWeatherInfoToKeyValueArray(selectedCityWeatherHistory.value?.weatherItems.first ?? WeatherInfo()))
+        weatherAttributes.accept(weatherUseCase.convertWeatherInfoToKeyValueArray(currentWeatherForCity.value))
     }
     func selectCityWeatherHistory(index: Int){
         selectedCityWeatherHistory.accept(savedCities.value[index])

@@ -61,7 +61,7 @@ extension UIView {
             origin: CGPoint(x: self.frame.midX - width / 2, y: self.frame.midY - width / 2),
             size: CGSize(width: width, height: width)
         )
-        let activityIndicator = NVActivityIndicatorView(frame: frame, type: .ballBeat, color: .primaryColor, padding: 8)
+        let activityIndicator = NVActivityIndicatorView(frame: frame, type: .lineScale, color: .primaryColor, padding: 8)
         addSubview(activityIndicator)
         activityIndicator.startAnimating()
         self.loader = activityIndicator

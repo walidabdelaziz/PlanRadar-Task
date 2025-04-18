@@ -27,7 +27,7 @@ class WeatherDetailsVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTableView()
-        weatherViewModel.fetchWeatherAttributes()
+        weatherViewModel.getWeatherData(searchText: weatherViewModel.selectedCityWeatherHistory.value?.cityName ?? "")
         bindUI()
     }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -51,6 +51,16 @@ class WeatherDetailsVC: UIViewController {
         detailsTV.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
     }
     func bindUI(){
+        // bind loader indicator
+        weatherViewModel.isLoading
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isLoading in
+                guard let self = self else { return }
+                isLoading ? self.view.showLoader() : self.view.hideLoader()
+                self.detailsTV.isHidden = isLoading ? true : false
+            })
+            .disposed(by: disposeBag)
+        
         // bind add button
         cancelBtn.rx.tap
             .bind(onNext: { [weak self] in
@@ -59,20 +69,19 @@ class WeatherDetailsVC: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        // bind labels and icons
-        weatherViewModel.selectedCityWeatherHistory
-            .compactMap { $0 }
+        // bind weather data
+        weatherViewModel.currentWeatherForCity
             .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] info in
+            .subscribe(onNext: { [weak self] weatherData in
                 guard let self = self else { return }
-                self.titleLbl.text = "\(info.cityName) \(info.countryCode)"
-                self.informationLbl.text = "WEATHER INFORMATION FOR \(info.cityName.uppercased()) RECEIVED ON \n\(info.weatherItems.first?.date?.toString(format: "dd.MM.yyyy - HH:mm") ?? "")"
-                let iconURL = String(format: Constants.WEATHER_ICON, info.weatherItems.first?.icon ?? "")
-                self.weatherIcon.setImageFromUrl(imageStr: iconURL)
+                self.updateUI(weatherData: weatherData)
+                self.weatherViewModel.saveWeatherData(weatherData: weatherData)
+                self.weatherViewModel.fetchWeatherAttributes()
             })
             .disposed(by: disposeBag)
+
         
-        // bind weather data
+        // bind weather attributes
         weatherViewModel.weatherAttributes
             .observe(on: MainScheduler.instance)
             .bind(to: detailsTV.rx.items(cellIdentifier: "WeatherAttributesTVCell", cellType: WeatherAttributesTVCell.self)) { row, weatherAttribute, cell in
@@ -80,5 +89,11 @@ class WeatherDetailsVC: UIViewController {
                 cell.weatherAttribute = weatherAttribute
             }
             .disposed(by: disposeBag)
+    }
+    func updateUI(weatherData: WeatherData){
+        titleLbl.text = "\(weatherData.name ?? "") \(weatherData.sys?.country ?? "")"
+        informationLbl.text = "WEATHER INFORMATION FOR \(weatherData.name?.uppercased() ?? "") RECEIVED ON \n\(Date().toString(format: "dd.MM.yyyy - HH:mm"))"
+        let iconURL = String(format: Constants.WEATHER_ICON, weatherData.weather?.first?.icon ?? "")
+        weatherIcon.setImageFromUrl(imageStr: iconURL)
     }
 }
