@@ -258,10 +258,92 @@
             </objects>
             <point key="canvasLocation" x="3995" y="4"/>
         </scene>
+        <!--Weather DetailsVC-->
+        <scene sceneID="CzC-6v-QCw">
+            <objects>
+                <viewController storyboardIdentifier="WeatherDetailsVC" id="Hon-NX-GYz" customClass="WeatherDetailsVC" customModule="PlanRadar_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwl-cJ-J6j">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-td-8d7">
+                                <rect key="frame" x="0.0" y="629" width="393" height="223"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bti-kY-MV2">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-jL-Vvm">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="555.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-a6-WCN">
+                                                <rect key="frame" x="166" y="8" width="61.333333333333343" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-zZ-FSR">
+                                                <rect key="frame" x="20" y="502.00000000000006" width="353" height="21.666666666666686"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlP-Gz-bIp">
+                                                <rect key="frame" x="0.0" y="-9" width="60" height="66"/>
+                                                <state key="normal" image="cancelIcon"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.88" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uYM-zZ-FSR" firstAttribute="top" secondItem="Gzj-a6-WCN" secondAttribute="bottom" constant="470" id="5d8-Lw-RE6"/>
+                                            <constraint firstAttribute="trailing" secondItem="uYM-zZ-FSR" secondAttribute="trailing" constant="20" id="9pi-5j-FpW"/>
+                                            <constraint firstItem="qlP-Gz-bIp" firstAttribute="centerY" secondItem="Gzj-a6-WCN" secondAttribute="centerY" constant="4" id="ApT-9g-8KK"/>
+                                            <constraint firstItem="qlP-Gz-bIp" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" id="Bq2-E2-zur"/>
+                                            <constraint firstAttribute="bottom" secondItem="uYM-zZ-FSR" secondAttribute="bottom" constant="32" id="Dr1-xr-kj5"/>
+                                            <constraint firstItem="Gzj-a6-WCN" firstAttribute="centerX" secondItem="jmm-jL-Vvm" secondAttribute="centerX" id="T4l-Cr-6YU"/>
+                                            <constraint firstItem="uYM-zZ-FSR" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" constant="20" id="TIK-Y2-wzt"/>
+                                            <constraint firstItem="Gzj-a6-WCN" firstAttribute="top" secondItem="jmm-jL-Vvm" secondAttribute="top" constant="8" id="pGX-iW-3PX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.88" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jmm-jL-Vvm" firstAttribute="top" secondItem="Bti-kY-MV2" secondAttribute="top" id="5Xe-eA-XFM"/>
+                                    <constraint firstAttribute="bottom" secondItem="jmm-jL-Vvm" secondAttribute="bottom" id="ECM-bi-4hs"/>
+                                    <constraint firstItem="jmm-jL-Vvm" firstAttribute="leading" secondItem="Bti-kY-MV2" secondAttribute="leading" id="VFl-t1-WlU"/>
+                                    <constraint firstItem="jmm-jL-Vvm" firstAttribute="width" secondItem="Bti-kY-MV2" secondAttribute="width" id="ai9-wJ-CaO"/>
+                                    <constraint firstAttribute="trailing" secondItem="jmm-jL-Vvm" secondAttribute="trailing" id="vgi-e6-dFW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Bq-8h-7BQ"/>
+                        <color key="backgroundColor" white="0.88" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Bti-kY-MV2" secondAttribute="bottom" id="32p-0C-QVN"/>
+                            <constraint firstItem="Vl3-td-8d7" firstAttribute="leading" secondItem="6Bq-8h-7BQ" secondAttribute="leading" id="6Rf-hM-ZMe"/>
+                            <constraint firstAttribute="trailing" secondItem="Vl3-td-8d7" secondAttribute="trailing" id="Jhh-a5-TVh"/>
+                            <constraint firstAttribute="bottom" secondItem="Vl3-td-8d7" secondAttribute="bottom" id="Nb2-PW-6uc"/>
+                            <constraint firstItem="6Bq-8h-7BQ" firstAttribute="trailing" secondItem="Bti-kY-MV2" secondAttribute="trailing" id="VET-Gz-e1T"/>
+                            <constraint firstItem="Bti-kY-MV2" firstAttribute="top" secondItem="6Bq-8h-7BQ" secondAttribute="top" id="XEZ-SQ-rug"/>
+                            <constraint firstItem="Bti-kY-MV2" firstAttribute="leading" secondItem="6Bq-8h-7BQ" secondAttribute="leading" id="r7o-3V-QLC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wif-4M-M2u"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="qlP-Gz-bIp" id="NaU-oJ-gOU"/>
+                        <outlet property="informationLbl" destination="uYM-zZ-FSR" id="thH-po-qfJ"/>
+                        <outlet property="scrollView" destination="Bti-kY-MV2" id="Qeq-Dd-Q65"/>
+                        <outlet property="titleLbl" destination="Gzj-a6-WCN" id="Mpo-9T-YEP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-K8-L1P" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4715.2671755725187" y="3.5211267605633805"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backIcon" width="60" height="66"/>
         <image name="background" width="375" height="223"/>
+        <image name="cancelIcon" width="60" height="66"/>
         <image name="plusIcon" width="60" height="67"/>
         <image name="searchIcon" width="20.666666030883789" height="20.666666030883789"/>
         <systemColor name="systemBackgroundColor">

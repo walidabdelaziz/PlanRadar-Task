@@ -59,6 +59,16 @@ class CitiesVC: UIViewController {
                 cell.savedWeatherData = savedWeatherData
             }
             .disposed(by: disposeBag)
+        
+        // handle tableview selection
+        citiesTV.rx.itemSelected
+            .subscribe(onNext: { [weak self] selectedItem in
+                guard let self = self else { return }
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let weatherDetailsVC = storyboard.instantiateViewController(withIdentifier: "WeatherDetailsVC") as! WeatherDetailsVC
+                present(weatherDetailsVC, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
 }
 extension CitiesVC: HistoryProtocol {

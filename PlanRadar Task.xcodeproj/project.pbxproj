@@ -38,6 +38,7 @@
 		CBEC961F2DB174A700C0B28E /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC961E2DB174A700C0B28E /* HistoryVC.swift */; };
 		CBEC96242DB177FA00C0B28E /* HistoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */; };
 		CBEC96252DB177FA00C0B28E /* HistoryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */; };
+		CBEC96272DB1E49D00C0B28E /* WeatherDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96262DB1E49D00C0B28E /* WeatherDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CBEC961E2DB174A700C0B28E /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVCell.swift; sourceTree = "<group>"; };
 		CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTVCell.xib; sourceTree = "<group>"; };
+		CBEC96262DB1E49D00C0B28E /* WeatherDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				CBEC95AF2DB111A800C0B28E /* CitiesVC.swift */,
 				CBEC95B62DB11BB800C0B28E /* SearchVC.swift */,
 				CBEC961E2DB174A700C0B28E /* HistoryVC.swift */,
+				CBEC96262DB1E49D00C0B28E /* WeatherDetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,
 				CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */,
 				CBEC95942DB1066700C0B28E /* Extensions.swift in Sources */,
+				CBEC96272DB1E49D00C0B28E /* WeatherDetailsVC.swift in Sources */,
 				CBEC961D2DB1658600C0B28E /* WeatherUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
