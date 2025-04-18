@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-jL-Vvm">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="605"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="595"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-a6-WCN">
                                                 <rect key="frame" x="166" y="12" width="61.333333333333343" height="24"/>
@@ -279,7 +279,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Weather Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-zZ-FSR">
-                                                <rect key="frame" x="12" y="556" width="369" height="17"/>
+                                                <rect key="frame" x="12" y="546" width="369" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -289,10 +289,10 @@
                                                 <state key="normal" image="cancelIcon"/>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBi-A5-NSl">
-                                                <rect key="frame" x="59" y="89" width="275" height="244"/>
+                                                <rect key="frame" x="59" y="90" width="275" height="236"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0QM-fe-Gih">
-                                                        <rect key="frame" x="0.0" y="174" width="275" height="50"/>
+                                                        <rect key="frame" x="0.0" y="166" width="275" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="VUS-vv-z03"/>
@@ -313,11 +313,11 @@
                                                     <constraint firstItem="0QM-fe-Gih" firstAttribute="leading" secondItem="GBi-A5-NSl" secondAttribute="leading" id="YXd-jR-dXw"/>
                                                     <constraint firstAttribute="bottom" secondItem="0QM-fe-Gih" secondAttribute="bottom" constant="20" id="caP-Qn-fX3"/>
                                                     <constraint firstItem="NXi-55-KsT" firstAttribute="centerX" secondItem="GBi-A5-NSl" secondAttribute="centerX" id="tp2-8i-Qcv"/>
-                                                    <constraint firstItem="0QM-fe-Gih" firstAttribute="top" secondItem="NXi-55-KsT" secondAttribute="bottom" constant="32" id="v2I-Rj-VyY"/>
+                                                    <constraint firstItem="0QM-fe-Gih" firstAttribute="top" secondItem="NXi-55-KsT" secondAttribute="bottom" constant="24" id="v2I-Rj-VyY"/>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-td-8d7">
-                                                <rect key="frame" x="0.0" y="382" width="393" height="223"/>
+                                                <rect key="frame" x="0.0" y="372" width="393" height="223"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.88" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -327,10 +327,10 @@
                                             <constraint firstItem="qlP-Gz-bIp" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" constant="-1" id="Bq2-E2-zur"/>
                                             <constraint firstItem="Vl3-td-8d7" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" id="Cn5-Au-xxE"/>
                                             <constraint firstAttribute="bottom" secondItem="uYM-zZ-FSR" secondAttribute="bottom" constant="32" id="Dr1-xr-kj5"/>
-                                            <constraint firstItem="uYM-zZ-FSR" firstAttribute="top" secondItem="GBi-A5-NSl" secondAttribute="bottom" constant="223" id="LvT-4P-4Xd"/>
+                                            <constraint firstItem="uYM-zZ-FSR" firstAttribute="top" secondItem="GBi-A5-NSl" secondAttribute="bottom" constant="220" id="LvT-4P-4Xd"/>
                                             <constraint firstItem="Gzj-a6-WCN" firstAttribute="centerX" secondItem="jmm-jL-Vvm" secondAttribute="centerX" id="T4l-Cr-6YU"/>
                                             <constraint firstItem="uYM-zZ-FSR" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" constant="12" id="TIK-Y2-wzt"/>
-                                            <constraint firstItem="GBi-A5-NSl" firstAttribute="top" secondItem="Gzj-a6-WCN" secondAttribute="bottom" constant="53" id="gHL-zT-Ltc"/>
+                                            <constraint firstItem="GBi-A5-NSl" firstAttribute="top" secondItem="Gzj-a6-WCN" secondAttribute="bottom" constant="54" id="gHL-zT-Ltc"/>
                                             <constraint firstAttribute="trailing" secondItem="Vl3-td-8d7" secondAttribute="trailing" id="iy2-O6-z5v"/>
                                             <constraint firstItem="GBi-A5-NSl" firstAttribute="width" secondItem="jmm-jL-Vvm" secondAttribute="width" multiplier="0.7" id="mbW-RL-tWE"/>
                                             <constraint firstAttribute="bottom" secondItem="Vl3-td-8d7" secondAttribute="bottom" id="olB-Az-ajw"/>

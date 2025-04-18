@@ -68,7 +68,7 @@ class CitiesVC: UIViewController {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let weatherDetailsVC = storyboard.instantiateViewController(withIdentifier: "WeatherDetailsVC") as! WeatherDetailsVC
                 weatherDetailsVC.weatherViewModel = self.weatherViewModel
-                present(weatherDetailsVC, animated: true, completion: nil)
+                self.navigationController?.pushViewController(weatherDetailsVC, animated: true)
             })
             .disposed(by: disposeBag)
     }

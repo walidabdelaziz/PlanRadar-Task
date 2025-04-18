@@ -55,7 +55,7 @@ class WeatherDetailsVC: UIViewController {
         cancelBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
-                self.dismiss(animated: true)
+                self.navigationController?.popViewController(animated: true)
             })
             .disposed(by: disposeBag)
         
