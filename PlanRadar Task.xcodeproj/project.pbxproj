@@ -229,6 +229,7 @@
 			children = (
 				CBEC95A82DB10E8300C0B28E /* Network */,
 				CBEC95C52DB128A700C0B28E /* Services */,
+				CBEC96332DB2A28E00C0B28E /* CoreData */,
 			);
 			path = "DataLayer ";
 			sourceTree = "<group>";
@@ -260,7 +261,6 @@
 			children = (
 				CBEC95C32DB1276F00C0B28E /* Weather.swift */,
 				CBEC95CB2DB1305400C0B28E /* GenericModel.swift */,
-				CBEC96052DB152CC00C0B28E /* Weather.xcdatamodeld */,
 			);
 			path = Entites;
 			sourceTree = "<group>";
@@ -306,6 +306,14 @@
 				CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */,
 			);
 			path = "PlanRadar TaskUITests";
+			sourceTree = "<group>";
+		};
+		CBEC96332DB2A28E00C0B28E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC96052DB152CC00C0B28E /* Weather.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
