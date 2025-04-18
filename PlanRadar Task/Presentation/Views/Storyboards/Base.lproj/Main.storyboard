@@ -73,14 +73,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYf-B0-5Cb">
-                                <rect key="frame" x="333" y="59.666666666666657" width="60" height="67"/>
+                                <rect key="frame" x="316.66666666666669" y="50.666666666666657" width="76.333333333333314" height="85"/>
                                 <state key="normal" image="plusIcon"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BiS-gm-dOQ">
                                 <rect key="frame" x="0.0" y="629" width="393" height="223"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-xR-9m7">
-                                <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="691.33333333333326"/>
+                                <rect key="frame" x="0.0" y="135.66666666666669" width="393" height="682.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -220,21 +220,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQP-sn-duH">
-                                <rect key="frame" x="0.0" y="60" width="60" height="66"/>
+                                <rect key="frame" x="-1" y="50.666666666666657" width="77.666666666666671" height="85"/>
                                 <state key="normal" image="backIcon"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fOn-HV-VTG">
                                 <rect key="frame" x="0.0" y="629" width="393" height="223"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-uZ-Ero">
-                                <rect key="frame" x="0.0" y="126" width="393" height="692"/>
+                                <rect key="frame" x="0.0" y="135.66666666666669" width="393" height="682.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WTx-tb-Ft8"/>
                         <color key="backgroundColor" white="0.88" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oQP-sn-duH" firstAttribute="leading" secondItem="m42-0w-Wr7" secondAttribute="leading" id="04u-Kk-2rl"/>
+                            <constraint firstItem="oQP-sn-duH" firstAttribute="leading" secondItem="m42-0w-Wr7" secondAttribute="leading" constant="-1" id="04u-Kk-2rl"/>
                             <constraint firstItem="f7N-uZ-Ero" firstAttribute="top" secondItem="oQP-sn-duH" secondAttribute="bottom" id="1UU-qk-kJD"/>
                             <constraint firstItem="VVD-3L-s6T" firstAttribute="centerX" secondItem="WTx-tb-Ft8" secondAttribute="centerX" id="2T8-hI-Sij"/>
                             <constraint firstAttribute="trailing" secondItem="fOn-HV-VTG" secondAttribute="trailing" id="4u0-2f-vmI"/>
@@ -273,22 +273,22 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmm-jL-Vvm">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="555.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="559.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-a6-WCN">
-                                                <rect key="frame" x="166" y="8" width="61.333333333333343" height="24"/>
+                                                <rect key="frame" x="166" y="12" width="61.333333333333343" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-zZ-FSR">
-                                                <rect key="frame" x="20" y="502.00000000000006" width="353" height="21.666666666666686"/>
+                                                <rect key="frame" x="20" y="506.00000000000006" width="353" height="21.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlP-Gz-bIp">
-                                                <rect key="frame" x="0.0" y="-9" width="60" height="66"/>
+                                                <rect key="frame" x="-1" y="-8.3333333333333357" width="77.666666666666671" height="85"/>
                                                 <state key="normal" image="cancelIcon"/>
                                             </button>
                                         </subviews>
@@ -296,12 +296,12 @@
                                         <constraints>
                                             <constraint firstItem="uYM-zZ-FSR" firstAttribute="top" secondItem="Gzj-a6-WCN" secondAttribute="bottom" constant="470" id="5d8-Lw-RE6"/>
                                             <constraint firstAttribute="trailing" secondItem="uYM-zZ-FSR" secondAttribute="trailing" constant="20" id="9pi-5j-FpW"/>
-                                            <constraint firstItem="qlP-Gz-bIp" firstAttribute="centerY" secondItem="Gzj-a6-WCN" secondAttribute="centerY" constant="4" id="ApT-9g-8KK"/>
-                                            <constraint firstItem="qlP-Gz-bIp" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" id="Bq2-E2-zur"/>
+                                            <constraint firstItem="qlP-Gz-bIp" firstAttribute="centerY" secondItem="Gzj-a6-WCN" secondAttribute="centerY" constant="10" id="ApT-9g-8KK"/>
+                                            <constraint firstItem="qlP-Gz-bIp" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" constant="-1" id="Bq2-E2-zur"/>
                                             <constraint firstAttribute="bottom" secondItem="uYM-zZ-FSR" secondAttribute="bottom" constant="32" id="Dr1-xr-kj5"/>
                                             <constraint firstItem="Gzj-a6-WCN" firstAttribute="centerX" secondItem="jmm-jL-Vvm" secondAttribute="centerX" id="T4l-Cr-6YU"/>
                                             <constraint firstItem="uYM-zZ-FSR" firstAttribute="leading" secondItem="jmm-jL-Vvm" secondAttribute="leading" constant="20" id="TIK-Y2-wzt"/>
-                                            <constraint firstItem="Gzj-a6-WCN" firstAttribute="top" secondItem="jmm-jL-Vvm" secondAttribute="top" constant="8" id="pGX-iW-3PX"/>
+                                            <constraint firstItem="Gzj-a6-WCN" firstAttribute="top" secondItem="jmm-jL-Vvm" secondAttribute="top" constant="12" id="pGX-iW-3PX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -341,10 +341,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backIcon" width="60" height="66"/>
+        <image name="backIcon" width="77.666664123535156" height="85"/>
         <image name="background" width="375" height="223"/>
-        <image name="cancelIcon" width="60" height="66"/>
-        <image name="plusIcon" width="60" height="67"/>
+        <image name="cancelIcon" width="77.666664123535156" height="85"/>
+        <image name="plusIcon" width="76.333335876464844" height="85"/>
         <image name="searchIcon" width="20.666666030883789" height="20.666666030883789"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
