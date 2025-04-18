@@ -31,7 +31,7 @@
 		CBEC95CF2DB137E900C0B28E /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95CE2DB137E900C0B28E /* NVActivityIndicatorView */; };
 		CBEC95D12DB137E900C0B28E /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC95D02DB137E900C0B28E /* NVActivityIndicatorViewExtended */; };
 		CBEC96072DB152CC00C0B28E /* Weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96052DB152CC00C0B28E /* Weather.xcdatamodeld */; };
-		CBEC96162DB1544100C0B28E /* PlanRadar_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96142DB1544100C0B28E /* PlanRadar_TaskTests.swift */; };
+		CBEC96162DB1544100C0B28E /* WeatherUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96142DB1544100C0B28E /* WeatherUseCaseTests.swift */; };
 		CBEC961A2DB1544500C0B28E /* PlanRadar_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */; };
 		CBEC961B2DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */; };
 		CBEC961D2DB1658600C0B28E /* WeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */; };
@@ -42,6 +42,8 @@
 		CBEC962A2DB24FDD00C0B28E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC96292DB24FDD00C0B28E /* Kingfisher */; };
 		CBEC962D2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC962B2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift */; };
 		CBEC962E2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC962C2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib */; };
+		CBEC96302DB29DB100C0B28E /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC962F2DB29DB000C0B28E /* WeatherServiceTests.swift */; };
+		CBEC96322DB29F7000C0B28E /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96312DB29F6E00C0B28E /* MockNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +86,7 @@
 		CBEC95C92DB12A6600C0B28E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		CBEC95CB2DB1305400C0B28E /* GenericModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModel.swift; sourceTree = "<group>"; };
 		CBEC96062DB152CC00C0B28E /* Weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weather.xcdatamodel; sourceTree = "<group>"; };
-		CBEC96142DB1544100C0B28E /* PlanRadar_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskTests.swift; sourceTree = "<group>"; };
+		CBEC96142DB1544100C0B28E /* WeatherUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCaseTests.swift; sourceTree = "<group>"; };
 		CBEC96172DB1544500C0B28E /* PlanRadar_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskUITests.swift; sourceTree = "<group>"; };
 		CBEC96182DB1544500C0B28E /* PlanRadar_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRadar_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBEC961C2DB1658100C0B28E /* WeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCase.swift; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 		CBEC96262DB1E49D00C0B28E /* WeatherDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsVC.swift; sourceTree = "<group>"; };
 		CBEC962B2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAttributesTVCell.swift; sourceTree = "<group>"; };
 		CBEC962C2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherAttributesTVCell.xib; sourceTree = "<group>"; };
+		CBEC962F2DB29DB000C0B28E /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
+		CBEC96312DB29F6E00C0B28E /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,7 +292,9 @@
 		CBEC96152DB1544100C0B28E /* PlanRadar TaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBEC96142DB1544100C0B28E /* PlanRadar_TaskTests.swift */,
+				CBEC96312DB29F6E00C0B28E /* MockNetworkService.swift */,
+				CBEC962F2DB29DB000C0B28E /* WeatherServiceTests.swift */,
+				CBEC96142DB1544100C0B28E /* WeatherUseCaseTests.swift */,
 			);
 			path = "PlanRadar TaskTests";
 			sourceTree = "<group>";
@@ -483,7 +489,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBEC96162DB1544100C0B28E /* PlanRadar_TaskTests.swift in Sources */,
+				CBEC96322DB29F7000C0B28E /* MockNetworkService.swift in Sources */,
+				CBEC96302DB29DB100C0B28E /* WeatherServiceTests.swift in Sources */,
+				CBEC96162DB1544100C0B28E /* WeatherUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
