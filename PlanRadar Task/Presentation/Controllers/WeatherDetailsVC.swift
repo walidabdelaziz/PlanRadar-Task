@@ -27,7 +27,7 @@ class WeatherDetailsVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTableView()
-        weatherViewModel.fetchWeatherDetails()
+        weatherViewModel.fetchWeatherAttributes()
         bindUI()
     }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -60,7 +60,7 @@ class WeatherDetailsVC: UIViewController {
             .disposed(by: disposeBag)
         
         // bind labels and icons
-        weatherViewModel.cityHistory
+        weatherViewModel.selectedCityWeatherHistory
             .compactMap { $0 }
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] info in

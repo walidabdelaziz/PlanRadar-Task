@@ -39,7 +39,7 @@ class HistoryVC: UIViewController {
             }).disposed(by: disposeBag)
         
         // bind weather data
-        weatherViewModel.cityHistory
+        weatherViewModel.selectedCityWeatherHistory
             .compactMap { $0 }
             .do(onNext: { [weak self] grouped in
                 guard let self = self else {return}

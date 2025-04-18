@@ -13,9 +13,9 @@ import UIKit
 
 class WeatherViewModel {
     let isLoading = BehaviorRelay<Bool>(value: false)
-    var weatherData = BehaviorRelay<WeatherData>(value: WeatherData())
-    var savedWeatherData = BehaviorRelay<[GroupedWeatherInfo]>(value: [])
-    var cityHistory = BehaviorRelay<GroupedWeatherInfo?>(value: nil)
+    var currentWeatherForCity = BehaviorRelay<WeatherData>(value: WeatherData())
+    var savedCities = BehaviorRelay<[GroupedWeatherInfo]>(value: [])
+    var selectedCityWeatherHistory = BehaviorRelay<GroupedWeatherInfo?>(value: nil)
     var weatherAttributes = BehaviorRelay<[WeatherDetailItem]>(value: [])
 
     private let weatherService: WeatherProtocol
@@ -33,7 +33,7 @@ class WeatherViewModel {
             self.isLoading.accept(false)
             switch result {
             case .success(let response):
-                self.weatherData.accept(response)
+                self.currentWeatherForCity.accept(response)
             case .failure(let error):
                 print("Error fetching data: \(error)")
             }
@@ -44,9 +44,12 @@ class WeatherViewModel {
     }
     func fetchSavedWeatherData() {
         let grouped = weatherUseCase.fetchGroupedWeatherDataByCityId()
-        savedWeatherData.accept(grouped)
+        savedCities.accept(grouped)
     }
-    func fetchWeatherDetails (){
-        weatherAttributes.accept(weatherUseCase.convertWeatherInfoToKeyValueArray(cityHistory.value?.weatherItems.first ?? WeatherInfo()))
+    func fetchWeatherAttributes(){
+        weatherAttributes.accept(weatherUseCase.convertWeatherInfoToKeyValueArray(selectedCityWeatherHistory.value?.weatherItems.first ?? WeatherInfo()))
+    }
+    func selectCityWeatherHistory(index: Int){
+        selectedCityWeatherHistory.accept(savedCities.value[index])
     }
 }

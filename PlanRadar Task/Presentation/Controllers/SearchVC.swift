@@ -74,7 +74,7 @@ class SearchVC: UIViewController {
             .disposed(by: disposeBag)
         
         // bind weather data
-        weatherViewModel.weatherData
+        weatherViewModel.currentWeatherForCity
             .map { [weak self] weatherData -> [WeatherData] in
                 guard let self = self else { return [] }
                 if weatherData.cod?.intValue != 200{

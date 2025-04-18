@@ -50,7 +50,7 @@ class CitiesVC: UIViewController {
             }).disposed(by: disposeBag)
         
         // bind weather data
-        weatherViewModel.savedWeatherData
+        weatherViewModel.savedCities
             .observe(on: MainScheduler.instance)
             .bind(to: citiesTV.rx.items(cellIdentifier: "CitiesTVCell", cellType: CitiesTVCell.self)) { row, savedWeatherData, cell in
                 cell.selectionStyle = .none
@@ -62,9 +62,9 @@ class CitiesVC: UIViewController {
         
         // handle tableview selection
         citiesTV.rx.itemSelected
-            .subscribe(onNext: { [weak self] selectedItem in
+            .subscribe(onNext: { [weak self] indexPath in
                 guard let self = self else { return }
-                weatherViewModel.cityHistory.accept(weatherViewModel.savedWeatherData.value[selectedItem.row])
+                weatherViewModel.selectCityWeatherHistory(index: indexPath.row)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let weatherDetailsVC = storyboard.instantiateViewController(withIdentifier: "WeatherDetailsVC") as! WeatherDetailsVC
                 weatherDetailsVC.weatherViewModel = self.weatherViewModel
@@ -75,7 +75,7 @@ class CitiesVC: UIViewController {
 }
 extension CitiesVC: HistoryProtocol {
     func didPressHistoryBtn(_ sender: UIButton) {
-        weatherViewModel.cityHistory.accept(weatherViewModel.savedWeatherData.value[sender.tag])
+        weatherViewModel.selectCityWeatherHistory(index: sender.tag)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let historyVC = storyboard.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryVC
         historyVC.weatherViewModel = weatherViewModel
