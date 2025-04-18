@@ -16,6 +16,7 @@ class WeatherViewModel {
     var weatherData = BehaviorRelay<WeatherData>(value: WeatherData())
     var savedWeatherData = BehaviorRelay<[GroupedWeatherInfo]>(value: [])
     var cityHistory = BehaviorRelay<GroupedWeatherInfo?>(value: nil)
+    var weatherAttributes = BehaviorRelay<[WeatherDetailItem]>(value: [])
 
     private let weatherService: WeatherProtocol
     private let weatherUseCase: WeatherUseCaseProtocol
@@ -44,5 +45,8 @@ class WeatherViewModel {
     func fetchSavedWeatherData() {
         let grouped = weatherUseCase.fetchGroupedWeatherDataByCityId()
         savedWeatherData.accept(grouped)
+    }
+    func fetchWeatherDetails (){
+        weatherAttributes.accept(weatherUseCase.convertWeatherInfoToKeyValueArray(cityHistory.value?.weatherItems.first ?? WeatherInfo()))
     }
 }

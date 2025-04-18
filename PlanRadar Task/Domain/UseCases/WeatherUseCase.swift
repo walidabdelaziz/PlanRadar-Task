@@ -12,6 +12,7 @@ import CoreData
 protocol WeatherUseCaseProtocol {
     func saveWeatherData(_ weatherData: WeatherData)
     func fetchGroupedWeatherDataByCityId() -> [GroupedWeatherInfo]
+    func convertWeatherInfoToKeyValueArray(_ weatherInfo: WeatherInfo) -> [WeatherDetailItem]
 }
 final class WeatherUseCase: WeatherUseCaseProtocol {
     private let context: NSManagedObjectContext
@@ -40,8 +41,10 @@ final class WeatherUseCase: WeatherUseCaseProtocol {
 
             let weatherInfo = WeatherInfo(context: context)
             weatherInfo.temperature = weatherData.main?.temp ?? 0.0
-            weatherInfo.humidity = Int64(weatherData.main?.humidity ?? 0)
+            weatherInfo.humidity = "\(weatherData.main?.humidity ?? 0)%"
             weatherInfo.desc = weatherData.weather?.first?.main ?? ""
+            weatherInfo.icon = weatherData.weather?.first?.icon ?? ""
+            weatherInfo.windspeed = "\(weatherData.wind?.speed ?? 0.0) km/h"
             weatherInfo.date = Date()
             weatherInfo.city = city
 
@@ -81,5 +84,21 @@ final class WeatherUseCase: WeatherUseCaseProtocol {
             return []
         }
     }
-
+    func convertWeatherInfoToKeyValueArray(_ weatherInfo: WeatherInfo) -> [WeatherDetailItem] {
+        var items: [WeatherDetailItem] = []
+        let properties = [
+            "description": weatherInfo.desc,
+            "temperature": weatherInfo.temperature.toCelsiusString,
+            "humidity": weatherInfo.humidity,
+            "windspeed": weatherInfo.windspeed
+        ]
+        let sortedKeys = properties.keys.sorted()
+        for key in sortedKeys {
+            if let value = properties[key] {
+                let valueStr = "\(value ?? "")"
+                items.append(WeatherDetailItem(key: key.uppercased(), value: valueStr))
+            }
+        }
+        return items
+    }
 }

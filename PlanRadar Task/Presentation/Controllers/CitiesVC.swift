@@ -64,8 +64,10 @@ class CitiesVC: UIViewController {
         citiesTV.rx.itemSelected
             .subscribe(onNext: { [weak self] selectedItem in
                 guard let self = self else { return }
+                weatherViewModel.cityHistory.accept(weatherViewModel.savedWeatherData.value[selectedItem.row])
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let weatherDetailsVC = storyboard.instantiateViewController(withIdentifier: "WeatherDetailsVC") as! WeatherDetailsVC
+                weatherDetailsVC.weatherViewModel = self.weatherViewModel
                 present(weatherDetailsVC, animated: true, completion: nil)
             })
             .disposed(by: disposeBag)

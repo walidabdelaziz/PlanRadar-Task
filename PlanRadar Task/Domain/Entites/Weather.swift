@@ -68,3 +68,8 @@ struct GroupedWeatherInfo {
     let countryCode: String
     let weatherItems: [WeatherInfo]
 }
+// MARK: - Weather Detail Item
+struct WeatherDetailItem {
+    let key: String
+    let value: String
+}

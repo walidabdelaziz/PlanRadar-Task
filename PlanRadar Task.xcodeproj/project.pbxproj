@@ -39,6 +39,9 @@
 		CBEC96242DB177FA00C0B28E /* HistoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */; };
 		CBEC96252DB177FA00C0B28E /* HistoryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */; };
 		CBEC96272DB1E49D00C0B28E /* WeatherDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC96262DB1E49D00C0B28E /* WeatherDetailsVC.swift */; };
+		CBEC962A2DB24FDD00C0B28E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CBEC96292DB24FDD00C0B28E /* Kingfisher */; };
+		CBEC962D2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC962B2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift */; };
+		CBEC962E2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEC962C2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,8 @@
 		CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVCell.swift; sourceTree = "<group>"; };
 		CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTVCell.xib; sourceTree = "<group>"; };
 		CBEC96262DB1E49D00C0B28E /* WeatherDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsVC.swift; sourceTree = "<group>"; };
+		CBEC962B2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAttributesTVCell.swift; sourceTree = "<group>"; };
+		CBEC962C2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherAttributesTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 			files = (
 				CBEC95BC2DB1216100C0B28E /* RxSwift in Frameworks */,
 				CBEC95CF2DB137E900C0B28E /* NVActivityIndicatorView in Frameworks */,
+				CBEC962A2DB24FDD00C0B28E /* Kingfisher in Frameworks */,
 				CBEC95BF2DB1259600C0B28E /* IQKeyboardManagerSwift in Frameworks */,
 				CBEC95D12DB137E900C0B28E /* NVActivityIndicatorViewExtended in Frameworks */,
 				CBEC95BA2DB1216100C0B28E /* RxCocoa in Frameworks */,
@@ -230,6 +236,8 @@
 				CBEC95B32DB11A2300C0B28E /* CitiesTVCell.xib */,
 				CBEC96222DB177FA00C0B28E /* HistoryTVCell.swift */,
 				CBEC96232DB177FA00C0B28E /* HistoryTVCell.xib */,
+				CBEC962B2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift */,
+				CBEC962C2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				CBEC95BE2DB1259600C0B28E /* IQKeyboardManagerSwift */,
 				CBEC95CE2DB137E900C0B28E /* NVActivityIndicatorView */,
 				CBEC95D02DB137E900C0B28E /* NVActivityIndicatorViewExtended */,
+				CBEC96292DB24FDD00C0B28E /* Kingfisher */,
 			);
 			productName = "PlanRadar Task";
 			productReference = CBEC952E2DB100CB00C0B28E /* PlanRadar Task.app */;
@@ -399,6 +408,7 @@
 				CBEC95B82DB1216100C0B28E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				CBEC95BD2DB1259600C0B28E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				CBEC95CD2DB137E900C0B28E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				CBEC96282DB24FDD00C0B28E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CBEC952F2DB100CB00C0B28E /* Products */;
@@ -420,6 +430,7 @@
 				CBEC95B42DB11A2300C0B28E /* CitiesTVCell.xib in Resources */,
 				CBEC958A2DB1064A00C0B28E /* Main.storyboard in Resources */,
 				CBEC958B2DB1064A00C0B28E /* Assets.xcassets in Resources */,
+				CBEC962E2DB27F7B00C0B28E /* WeatherAttributesTVCell.xib in Resources */,
 				CBEC96252DB177FA00C0B28E /* HistoryTVCell.xib in Resources */,
 				CBEC958D2DB1064A00C0B28E /* LaunchScreen.storyboard in Resources */,
 			);
@@ -461,6 +472,7 @@
 				CBEC95C42DB1277400C0B28E /* Weather.swift in Sources */,
 				CBEC95AC2DB10F2000C0B28E /* AppSecrets.swift in Sources */,
 				CBEC95892DB1064A00C0B28E /* AppDelegate.swift in Sources */,
+				CBEC962D2DB27F7B00C0B28E /* WeatherAttributesTVCell.swift in Sources */,
 				CBEC95942DB1066700C0B28E /* Extensions.swift in Sources */,
 				CBEC96272DB1E49D00C0B28E /* WeatherDetailsVC.swift in Sources */,
 				CBEC961D2DB1658600C0B28E /* WeatherUseCase.swift in Sources */,
@@ -840,6 +852,14 @@
 				minimumVersion = 5.2.0;
 			};
 		};
+		CBEC96282DB24FDD00C0B28E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -872,6 +892,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBEC95CD2DB137E900C0B28E /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorViewExtended;
+		};
+		CBEC96292DB24FDD00C0B28E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBEC96282DB24FDD00C0B28E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

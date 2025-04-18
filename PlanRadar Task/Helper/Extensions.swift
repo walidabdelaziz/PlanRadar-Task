@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import NVActivityIndicatorView
+import Kingfisher
 
 extension UIColor {
     convenience init(hexString: String) {
@@ -105,3 +106,32 @@ extension Double {
     }
 }
 
+extension UIImageView {
+    func setImageFromUrl(
+        imageStr: String,
+        placeholder: String? = nil) {
+        guard let imageURL = URL(string: imageStr) else {
+            self.image = placeholder != nil ? UIImage(named: placeholder!) : nil
+            return
+        }
+        self.kf.setImage(
+            with: imageURL,
+            placeholder: placeholder != nil ? UIImage(named: placeholder!) : nil,
+            options: [
+                .loadDiskFileSynchronously,
+                .cacheOriginalImage,
+                .transition(.fade(1))
+            ]
+        ) { result in
+            switch result {
+            case .success(let imageResult):
+                self.image = imageResult.image
+            case .failure(let error):
+                if !error.isTaskCancelled && !error.isNotCurrentTask {
+                    self.image = placeholder != nil ? UIImage(named: placeholder!) : nil
+                    self.contentMode = .scaleAspectFit
+                }
+            }
+        }
+    }
+}

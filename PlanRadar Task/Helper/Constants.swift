@@ -8,4 +8,5 @@
 class Constants{
     static var BASE_URL = "https://api.openweathermap.org/data/2.5/"
     static var WEATHER = BASE_URL + "weather"
+    static var WEATHER_ICON = "http://openweathermap.org/img/w/%@.png"
 }
